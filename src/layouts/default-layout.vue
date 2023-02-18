@@ -65,7 +65,7 @@ const mobileMenuVisible = ref(false);
     </div>
   </nav>
 
-  <main class="f fd-col w-100">
+  <main class="f fd-col w-100 rg-4">
     <RouterView />
   </main>
 
