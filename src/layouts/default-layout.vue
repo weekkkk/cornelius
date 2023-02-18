@@ -65,7 +65,7 @@ const mobileMenuVisible = ref(false);
     </div>
   </nav>
 
-  <main class="f fd-col w-100 p-4">
+  <main class="f fd-col w-100">
     <RouterView />
   </main>
 
@@ -185,11 +185,6 @@ nav {
   @media (max-width: 624px) {
     display: none !important;
   }
-}
-
-.container {
-  max-width: 1180px;
-  width: 100%;
 }
 
 main {

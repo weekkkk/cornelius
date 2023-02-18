@@ -27,6 +27,11 @@ body {
   flex-direction: column;
 }
 
+.container {
+  max-width: 1180px;
+  width: 100%;
+}
+
 a {
   text-decoration: none;
 }
