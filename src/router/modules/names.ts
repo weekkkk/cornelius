@@ -1,12 +1,24 @@
 /**
- * * Стили
- */
-export const STYLE = 'style';
-/**
- * * Главная
+ * * Главаная
  */
 export const MAIN = 'main';
 /**
- * * Поповер
+ * * Оборудование
  */
-export const POPOVER = 'popover';
+export const EQUIPMENT = 'equipment';
+/**
+ * * Проектирование
+ */
+export const DESIGN = 'design';
+/**
+ * * Новости
+ */
+export const NEWS = 'news';
+/**
+ * * Заказ
+ */
+export const ORDER = 'order';
+/**
+ * * Контакты
+ */
+export const CONTACTS = 'contacts';

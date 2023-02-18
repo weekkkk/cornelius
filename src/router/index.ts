@@ -3,15 +3,16 @@ import {
   createWebHistory,
   type RouteRecordRaw,
 } from 'vue-router';
-import {} from './modules';
+import { Main, Equipment, Design, News, Order, Contacts } from './modules';
+import { MAIN } from './modules/names';
 
 const routes: Array<RouteRecordRaw> = [
   {
     name: '',
     path: '',
     component: () => import('@/layouts/default-layout.vue'),
-    // redirect: Main,
-    children: [],
+    redirect: { name: MAIN },
+    children: [Main, Equipment, Design, News, Order, Contacts],
   },
 ];
 const router = createRouter({
@@ -23,9 +24,7 @@ export default router;
 
 router.beforeEach(async (to, from, next) => {
   const { Title } = to.meta;
-  const brand = '@n-';
-  document.title = `${brand}${(Title as string)
-    .replace(' ', '-')
-    .toLowerCase()}`;
+  const brand = '';
+  document.title = `${brand}${Title as string}`;
   next();
 });

@@ -3,17 +3,38 @@
 </template>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 html {
-  font-family: 'Montserrat';
-  font-size: var(--n-lh-regular);
+  // font-family: 'Montserrat';
   font-size: var(--n-fs-p);
   color: var(--n-base);
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: var(--n-lh-regular);
+  display: flex;
+  min-height: 100vh;
+}
+
+#app {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+  text-decoration: none;
 }
 
 table {
