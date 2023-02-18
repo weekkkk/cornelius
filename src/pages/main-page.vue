@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import NCarousel from '@/components/carousel/n-carousel.vue';
+import NButton from '@/components/button/n-button.vue';
+import { ESize, EColor } from '@/components/enums';
 import Slide1Img from '@/assets/images/slide-1.png';
 import Slide2Img from '@/assets/images/slide-2.png';
 import Slide3Img from '@/assets/images/slide-3.png';
@@ -28,13 +30,13 @@ const slides: { image: string; title: string; description: string }[] = [
 <template>
   <NCarousel class="main_slider" is-loop>
     <div
-      class="main_slider-banner f jc-c"
+      class="main_slider-banner f ai-c jc-c"
       v-for="slide in slides"
       :key="slide.title"
     >
-      <div class="container info-block p-5 f c-default">
+      <div class="container info-block f c-default">
         <div class="info-wrap">
-          <div class="info f fd-col rg-3">
+          <div class="info p-3 f fd-col rg-3">
             <h1>{{ slide.title }}</h1>
             <p class="fw-medium">{{ slide.description }}</p>
           </div>
@@ -44,10 +46,10 @@ const slides: { image: string; title: string; description: string }[] = [
     </div>
 
     <template #back>
-      <button>назад</button>
+      <NButton :size="ESize.Large" :color="EColor.Base" />
     </template>
     <template #next>
-      <button>вперед</button>
+      <NButton :size="ESize.Large" :color="EColor.Base" />
     </template>
   </NCarousel>
 </template>
@@ -55,7 +57,7 @@ const slides: { image: string; title: string; description: string }[] = [
 <style lang="scss" scoped>
 .main_slider {
   &-banner {
-    height: 664px;
+    height: 464px;
     width: 100vw;
     position: relative;
     img {
@@ -66,7 +68,9 @@ const slides: { image: string; title: string; description: string }[] = [
     }
     .info-block {
       position: absolute;
+      width: 100%;
       z-index: 1;
+      padding: 48px 72px;
     }
     .info-wrap {
       display: flex;
@@ -77,14 +81,6 @@ const slides: { image: string; title: string; description: string }[] = [
       width: 280px;
       aspect-ratio: 1;
       background-color: rgba($color: #e12021, $alpha: 0.8);
-      .info {
-        position: absolute;
-        width: 180%;
-        left: 20%;
-        p {
-          margin-left: 24px;
-        }
-      }
     }
   }
 }

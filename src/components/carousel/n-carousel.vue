@@ -6,7 +6,7 @@ const props = defineProps({
   /** Шаг */
   step: { type: Number, default: 1 },
   /** Шаг при прокрутке колесиком мыши */
-  wheelStep: { type: Number, default: 1 },
+  wheelStep: { type: Number, default: 0 },
   /** Циклична ли карусель */
   isLoop: { type: Boolean, default: false },
 });
@@ -244,6 +244,7 @@ const stop = (pageX: number) => {
 };
 /** Прокрутка колесиком мыши */
 const wheel = (e: WheelEvent) => {
+  if (!props.wheelStep) return;
   if ((e.deltaY || e.deltaX) > 0) {
     next(props.wheelStep);
   } else if ((e.deltaY || e.deltaX) < 0) {
@@ -268,7 +269,7 @@ onUnmounted(() => {
       ref="$elements_wrapper"
       @mousedown.prevent="mousedown"
       @touchstart="touchstart"
-      @wheel.prevent="wheel"
+      @wheel="wheel"
     >
       <!-- Элементы карусели -->
       <div
@@ -315,7 +316,7 @@ onUnmounted(() => {
 :root {
   --n-carousel-cg: 0;
   --n-carousel-ts: 0.5s;
-  --n-carousel-action-tx: 0;
+  --n-carousel-action-tx: -16px;
 }
 </style>
 
