@@ -1,11 +1,11 @@
 import type { RouteRecordRaw } from 'vue-router';
-import { ORDER } from './names';
+import { CONTACTS } from './names';
 /**
  * * Контакты
  */
 const Contacts: RouteRecordRaw = {
-  name: ORDER,
-  path: ORDER,
+  name: CONTACTS,
+  path: CONTACTS,
   meta: { Title: 'Контакты' },
   component: () => import('@/pages/contacts-page.vue'),
 };
