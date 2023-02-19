@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkcornelius"]=self["webpackChunkcornelius"]||[]).push([[43],{4043:function(c,n,s){s.r(n),s.d(n,{default:function(){return l}});var e=s(3396);const r={class:"f jc-c ai-c p-4 h-100"},t=(0,e._)("h1",{class:"ta-c py-4"},"Раздел находится в разработке.",-1),u=[t];function a(c,n){return(0,e.wg)(),(0,e.iD)("section",r,u)}var i=s(89);const o={},f=(0,i.Z)(o,[["render",a]]);var l=f}}]);
+//# sourceMappingURL=43.710061c5.js.map
