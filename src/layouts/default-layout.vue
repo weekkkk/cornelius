@@ -35,18 +35,35 @@ const mobileMenuVisible = ref(false);
     <div class="container f jc-sb ai-c cg-3">
       <img src="@/assets/images/logo.png" alt="Logo" height="54" />
 
-      <div class="contacts f cg-3">
-        <a class="fs-small-p c-brand fw-medium" :href="`tel:${phone}`">{{
-          phone
-        }}</a>
-        <a class="fs-small-p c-brand fw-medium" :href="`mailto:${email}`">{{
-          email
-        }}</a>
+      <div class="contacts f cg-4 ai-c">
+        <div class="f fw-wrap jc-fe cg-3 rg-1">
+          <a class="fs-small-p c-brand fw-medium" :href="`tel:${phone}`">
+            {{ phone }}
+          </a>
+          <a class="fs-small-p c-brand fw-medium" :href="`mailto:${email}`">
+            {{ email }}
+          </a>
+        </div>
+
+        <div class="f g-3">
+          <a class="lh-no" href="https://tlgg.ru/cornelius_gas">
+            <img src="@/assets/images/icons/soc1.png" height="32" />
+          </a>
+          <a class="lh-no" href="viber://chat?number=%2B37377783485/">
+            <img src="@/assets/images/icons/soc2.png" height="32" />
+          </a>
+          <a class="lh-no" href="https://wa.me/37377783485">
+            <img src="@/assets/images/icons/soc3.png" height="32" />
+          </a>
+        </div>
       </div>
 
-      <button class="mobile-menu-burder" @click="mobileMenuVisible = true">
-        test
-      </button>
+      <img
+        class="mobile-menu-burder"
+        src="@/assets/images/icons/burder.png"
+        height="32"
+        @click="mobileMenuVisible = true"
+      />
     </div>
   </header>
 
@@ -120,27 +137,33 @@ const mobileMenuVisible = ref(false);
     </div>
   </footer>
 
-  <div
-    class="mobile-menu f jc-fe"
-    @click="mobileMenuVisible = false"
-    v-if="mobileMenuVisible"
-  >
-    <aside @click.stop class="f fd-col bg-second-100 py-4">
-      <button @click="mobileMenuVisible = false">test</button>
-      <ul class="fs-small-p f fd-col">
-        <li v-for="link in links" class="f fd-col">
-          <RouterLink
-            :to="{ name: link.name }"
-            class="px-4 f fd-col c-default fw-medium"
-          >
-            <span class="py-3">
-              {{ link.title }}
-            </span>
-          </RouterLink>
-        </li>
-      </ul>
-    </aside>
-  </div>
+  <Transition name="mobile-menu">
+    <div
+      class="mobile-menu f jc-fe"
+      @click="mobileMenuVisible = false"
+      v-if="mobileMenuVisible"
+    >
+      <aside @click.stop class="f fd-col bg-second-100 py-4">
+        <img
+          @click="mobileMenuVisible = false"
+          src="@/assets/images/icons/close.png"
+          height="24"
+        />
+        <ul class="fs-small-p f fd-col">
+          <li v-for="link in links" class="f fd-col">
+            <RouterLink
+              :to="{ name: link.name }"
+              class="px-4 f fd-col c-default fw-medium"
+            >
+              <span class="py-3">
+                {{ link.title }}
+              </span>
+            </RouterLink>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </Transition>
 </template>
 
 <style lang="scss" scoped>
@@ -192,7 +215,7 @@ main {
 }
 
 footer {
-  .info-column .title {
+  .info-column .title:not(:last-child) {
     border-bottom: 1px solid var(--n-default);
   }
   &.info-row {
@@ -225,6 +248,14 @@ footer {
   }
   aside {
     width: 320px;
+
+    img {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      filter: invert(100%);
+    }
+
     ul li {
       a {
         &:hover {
@@ -238,6 +269,14 @@ footer {
         background-color: rgba($color: #000, $alpha: 0.2);
       }
     }
+  }
+  &-enter-active,
+  &-leave-active {
+    transition: opacity 0.5s ease;
+  }
+  &-enter-from,
+  &-leave-to {
+    opacity: 0;
   }
 }
 </style>

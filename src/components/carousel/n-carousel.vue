@@ -164,8 +164,6 @@ const next = (step: number = props.step) => {
   }
   if (newOffset == offset.value) return;
   if (newOffset < 0) newOffset = 0;
-  console.log({ newOffset });
-
   offset.value = newOffset;
 };
 /** Перетаскиванется ли элемент */

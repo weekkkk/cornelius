@@ -72,10 +72,14 @@ var declension = ['год', 'года', 'лет'];
     </div>
 
     <template #back>
-      <NButton :size="ESize.Large" :color="EColor.Base" />
+      <NButton :size="ESize.Large" :color="EColor.Base" square class="arrow">
+        <img src="@/assets/images/icons/arrow-l.png" height="32" />
+      </NButton>
     </template>
     <template #next>
-      <NButton :size="ESize.Large" :color="EColor.Base" />
+      <NButton :size="ESize.Large" :color="EColor.Base" square class="arrow">
+        <img src="@/assets/images/icons/arrow-r.png" height="32" />
+      </NButton>
     </template>
   </NCarousel>
 
@@ -108,10 +112,14 @@ var declension = ['год', 'года', 'лет'];
           <img src="@/assets/images/brands/viessmann.png" />
           <img src="@/assets/images/brands/WILO.png" />
           <template #back>
-            <NButton :size="ESize.Large" :color="EColor.Brand" no-fill />
+            <NButton :size="ESize.Large" :color="EColor.Brand" no-fill>
+              &lt;
+            </NButton>
           </template>
           <template #next>
-            <NButton :size="ESize.Large" :color="EColor.Brand" no-fill />
+            <NButton :size="ESize.Large" :color="EColor.Brand" no-fill>
+              &gt;
+            </NButton>
           </template>
         </NCarousel>
       </div>
@@ -192,6 +200,14 @@ var declension = ['год', 'года', 'лет'];
       width: 280px;
       aspect-ratio: 1;
       background-color: rgba($color: #e12021, $alpha: 0.8);
+    }
+  }
+
+  .arrow {
+    --n-button-sz: 60px;
+    --n-button-bg: rgba(0, 0, 0, 0.2);
+    img {
+      filter: invert(100%);
     }
   }
 }

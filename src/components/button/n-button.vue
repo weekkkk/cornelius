@@ -32,7 +32,7 @@ const props = defineProps({
   /**
    * * Иконка после слота
    */
-  afterIcon: { type: String, default: undefined },
+  afterIcon: { type: String, default: undefined }
 });
 </script>
 
