@@ -5,5 +5,3 @@
     <h1 class="ta-c py-4">Раздел находится в разработке.</h1>
   </section>
 </template>
-
-<style lang="less" scoped></style>

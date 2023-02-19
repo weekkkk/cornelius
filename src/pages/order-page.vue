@@ -42,5 +42,3 @@ import { CONTACTS } from '@/router/modules/names';
     />
   </section>
 </template>
-
-<style lang="less" scoped></style>

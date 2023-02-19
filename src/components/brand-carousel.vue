@@ -25,5 +25,3 @@ import { ESize, EColor } from '@/components/enums';
     </NCarousel>
   </div>
 </template>
-
-<style lang="less" scoped></style>
