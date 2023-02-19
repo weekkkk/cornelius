@@ -1,13 +1,4 @@
 <script lang="ts" setup>
-import {
-  MAIN,
-  EQUIPMENT,
-  DESIGN,
-  NEWS,
-  ORDER,
-  CONTACTS,
-} from '@/router/modules/names';
-
 import { routes } from '@/router';
 import { ref } from 'vue';
 /**
@@ -70,7 +61,7 @@ const mobileMenuVisible = ref(false);
   <nav class="f jc-c bg-brand p-4">
     <div class="container f jc-fe">
       <ul class="fs-small-p f ai-c cg-4 rg-3">
-        <li v-for="link in links">
+        <li v-for="link in links" :key="link.name">
           <RouterLink
             :to="{ name: link.name }"
             class="large-link c-default fw-medium"
@@ -94,7 +85,7 @@ const mobileMenuVisible = ref(false);
         <h2 class="title pb-3 lh-no">Меню:</h2>
 
         <ul class="fs-small-p f fd-col rg-3">
-          <li v-for="link in links">
+          <li v-for="link in links" :key="link.name">
             <RouterLink :to="{ name: link.name }" class="c-default fw-medium">
               {{ link.title }}
             </RouterLink>
@@ -150,7 +141,7 @@ const mobileMenuVisible = ref(false);
           height="24"
         />
         <ul class="fs-small-p f fd-col">
-          <li v-for="link in links" class="f fd-col">
+          <li v-for="link in links" :key="link.name" class="f fd-col">
             <RouterLink
               :to="{ name: link.name }"
               class="px-4 f fd-col c-default fw-medium"

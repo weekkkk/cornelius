@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, ref, useSlots, onUnmounted, nextTick } from 'vue';
+import { computed, ref, useSlots, onUnmounted, nextTick, watch } from 'vue';
 
 /** Свойства */
 const props = defineProps({
@@ -35,16 +35,19 @@ window.addEventListener('resize', onResize);
 
 /** Дизейбл карусели */
 const isDisabled = computed(() => {
-  if (isUpdate.value != undefined) isUpdate.value = undefined;
+  if (isUpdate.value) setUpd();
   return !(
     slots.default?.() &&
     slots.default()?.length &&
-    elements.value.length &&
+    elements.value?.length &&
     $elements_wrapper.value &&
     $elements.value &&
     $elements_wrapper.value.offsetWidth < $elements.value.offsetWidth
   );
 });
+const setUpd = () => {
+  if (isUpdate.value != undefined) isUpdate.value = undefined;
+};
 
 /** Элементы карусели */
 const elements = computed((): HTMLElement[] => {
@@ -77,7 +80,7 @@ const isTransition = ref(false);
 /** Текущее смещение по x */
 const x = computed({
   get: (): number => {
-    let resX: number = 0;
+    let resX = 0;
 
     if (maxX.value && elements.value?.length)
       resX = elements.value[Math.floor(offset.value)]?.offsetLeft;
@@ -95,9 +98,9 @@ const x = computed({
     return resX;
   },
   set: (newX: number) => {
-    if (!maxX) return;
+    if (!maxX.value) return;
     let newOffset: number = offset.value;
-    if (!isDrag)
+    if (!isDrag.value)
       newOffset = elements.value.findIndex((el) => el.offsetLeft >= newX);
     else {
       newOffset = elements.value.findIndex((el) => el.offsetLeft > newX);
@@ -114,7 +117,6 @@ const x = computed({
 });
 /** Максимальное смещение по x */
 const maxX = computed(() => {
-  if (isResize.value) isResize.value = false;
   let maxX = 0;
   if (isDisabled.value) return 0;
   if ($elements_wrapper.value && $elements.value && $elements_container.value) {
@@ -124,6 +126,10 @@ const maxX = computed(() => {
     maxX = els_w - wrap_w;
   }
   return maxX;
+});
+
+watch(isResize, () => {
+  if (isResize.value) isResize.value = false;
 });
 /** Шаг назад */
 const back = (step: number = props.step) => {
