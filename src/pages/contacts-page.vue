@@ -8,9 +8,9 @@ import NInput from '@/components/input/n-input.vue';
 <template>
   <section class="f jc-c p-4">
     <div class="container py-4 f fd-col rg-4 pg-4">
-      <h1 class="ta-c lh-no">Контактная информация:</h1>
+      <h1 class="ta-c lh-no c-second-100">Контактная информация:</h1>
 
-      <p class="c-second-75 ta-c fw-medium">
+      <p class="c-second-75 ta-c fw-medium c-second-25">
         Наш адрес: Молдова, г.Тирасполь, ул. Карла-Либкнехта 385, каб. 201, 202,
         204
       </p>
@@ -42,14 +42,20 @@ import NInput from '@/components/input/n-input.vue';
         </form>
         <div class="contacts f fd-col rg-4">
           <div class="f fd-col rg-2">
-            <h4 class="fw-regular">Email</h4>
+            <div class="f ai-c cg-2">
+              <span class="material-icons-round"> mail </span>
+              <h4 class="fw-regular">Email</h4>
+            </div>
             <a class="fw-medium c-brand" href="mailto:corneliusgas@gmail.com">
               corneliusgas@gmail.com
             </a>
           </div>
 
           <div class="f fd-col rg-2">
-            <h4 class="fw-regular">Телефоны</h4>
+            <div class="f ai-c cg-2">
+              <span class="material-icons-round"> phone </span>
+              <h4 class="fw-regular">Телефоны</h4>
+            </div>
 
             <div class="f fd-col rg-3 c-second-75">
               <div class="f jc-sb">
@@ -57,30 +63,6 @@ import NInput from '@/components/input/n-input.vue';
                 <p class="fw-medium">
                   <a class="c-brand" href="tel:+373 533 83481">
                     +373 533 83481
-                  </a>
-                  (9:00-17:00)
-                </p>
-              </div>
-
-              <p class="fw-bold">Производственно-техническая база с. Суклея:</p>
-
-              <div class="f jc-sb">
-                <p class="fw-bold">Аналитический отдел (Viber/WhatsApp):</p>
-                <p class="fw-medium">
-                  <a class="c-brand" href="tel:+373 777 81207">
-                    +373 777 81207
-                  </a>
-                  (17:00-3:00)
-                </p>
-              </div>
-
-              <div class="f jc-sb">
-                <p class="fw-bold">
-                  Начальник ПТО, Маркетинг (Viber/WhatsApp):
-                </p>
-                <p class="fw-medium">
-                  <a class="c-brand" href="tel:+373 795 35511">
-                    +373 795 35511
                   </a>
                   (9:00-17:00) <br />
                   <a class="c-brand" href="tel:+373 777 83485">
@@ -90,13 +72,29 @@ import NInput from '@/components/input/n-input.vue';
                 </p>
               </div>
 
+              <p class="fw-bold">Производственно-техническая база с. Суклея:</p>
+
+              <div class="f jc-sb">
+                <p class="fw-bold">ПТО, Маркетинг (Viber/WhatsApp):</p>
+                <p class="fw-medium">
+                  <a class="c-brand" href="tel:+373 777 81207">
+                    +373 777 66761
+                  </a>
+                  (8:00-17:00) <br />
+                  <a class="c-brand" href="tel:+373 795 35511">
+                    +373 795 35511
+                  </a>
+                  (9:00-17:00)
+                </p>
+              </div>
+
               <div class="f jc-sb">
                 <p class="fw-bold">Директор (Viber):</p>
                 <p class="fw-medium">
-                  <a class="c-brand" href="tel:+373 777 87580">
-                    +373 777 87580
+                  <a class="c-brand" href="tel:+373 777 130084">
+                    +373 777 130084
                   </a>
-                  (8:20-17:00)
+                  (8:00-17:00)
                 </p>
               </div>
 
@@ -104,7 +102,7 @@ import NInput from '@/components/input/n-input.vue';
                 <p class="fw-bold">Проектный отдел:</p>
                 <p class="fw-medium">
                   <a class="c-brand" href="tel:+373 533 53720">
-                    +373 533 53720
+                    +373 77895589
                   </a>
                   (9:00-17:00)
                 </p>
@@ -124,7 +122,11 @@ import NInput from '@/components/input/n-input.vue';
 
           <ul class="f jc-sb fw-wrap g-3 mt-3">
             <li class="f cg-2">
-              <img src="@/assets/images/icons/soc1.png" height="42" />
+              <img
+                style="opacity: 0.8"
+                src="@/assets/images/icons/soc1.png"
+                height="42"
+              />
               <div class="f fd-col rg-2">
                 <h4 class="fw-regular lh-no">Telegram</h4>
                 <a
@@ -136,7 +138,11 @@ import NInput from '@/components/input/n-input.vue';
               </div>
             </li>
             <li class="f cg-2">
-              <img src="@/assets/images/icons/soc2.png" height="42" />
+              <img
+                style="opacity: 0.8"
+                src="@/assets/images/icons/soc2.png"
+                height="42"
+              />
               <div class="f fd-col rg-2">
                 <h4 class="fw-regular lh-no">Viber</h4>
                 <a
@@ -148,7 +154,11 @@ import NInput from '@/components/input/n-input.vue';
               </div>
             </li>
             <li class="f cg-2">
-              <img src="@/assets/images/icons/soc3.png" height="42" />
+              <img
+                style="opacity: 0.8"
+                src="@/assets/images/icons/soc3.png"
+                height="42"
+              />
               <div class="f fd-col rg-2">
                 <h4 class="fw-regular lh-no">Telegram</h4>
                 <a

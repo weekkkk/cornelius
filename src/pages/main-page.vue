@@ -34,13 +34,24 @@ const slides: { image: string; title: string; description: string }[] = [
  * * Информация
  */
 const information = {
-  yearOfBirth: 1997,
+  dateOfBirth: new Date(1997, 1, 17),
   employees: 30,
   clients: 30,
   governmentOrganizations: 160,
 };
 
-const age = new Date().getFullYear() - information.yearOfBirth;
+function getAge(date: Date) {
+  var today = new Date();
+  var birthDate = new Date(date);
+  var age = today.getFullYear() - birthDate.getFullYear();
+  var m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  return age;
+}
+
+const age = getAge(information.dateOfBirth);
 
 function plural(number: number, titles: string[]) {
   const cases = [2, 0, 1, 1, 1, 2];
@@ -126,14 +137,42 @@ var declension = ['год', 'года', 'лет'];
     </div>
   </section>
 
-  <section class="info_section f fd-col ai-c bg-second-0 p-4 ta-c">
+  <section class="info_section c-second-100 f fd-col ai-c bg-second-0 p-4 ta-c">
     <div class="container f fd-col rg-4">
-      <h1>Корнелиус <u>первые</u> в сфере энергосбережения</h1>
+      <h1>
+        Корнелиус
+        <span class="mark-text">
+          первые
+          <svg
+            style="fill: var(--n-brand)"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 500 150"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M5,125.4c30.5-3.8,137.9-7.6,177.3-7.6c117.2,0,252.2,4.7,312.7,7.6"
+            ></path>
+            <path
+              d="M26.9,143.8c55.1-6.1,126-6.3,162.2-6.1c46.5,0.2,203.9,3.2,268.9,6.4"
+            ></path>
+          </svg>
+        </span>
+        в сфере энергосбережения
+      </h1>
 
-      <ul class="f fd-col rg-2 fs-small-p fw-medium">
-        <li>Основана в {{ information.yearOfBirth }} году</li>
-        <li>Более 150 компаний выбрали нас</li>
-        <li>Качественная продукция от известных производителей</li>
+      <ul class="f fd-col ai-c rg-2 fs-small-p fw-medium">
+        <li class="f ai-c cg-1">
+          <span class="material-icons-round fs-p"> done </span>
+          Основана в {{ information.dateOfBirth.getFullYear() }} году
+        </li>
+        <li class="f ai-c cg-1">
+          <span class="material-icons-round fs-p"> done </span>
+          Более 150 компаний выбрали нас
+        </li>
+        <li class="f ai-c cg-1">
+          <span class="material-icons-round fs-p"> done </span>
+          Качественная продукция от известных производителей
+        </li>
       </ul>
 
       <ul class="info_list f fw-wrap g-3 fw-medium">
@@ -141,28 +180,30 @@ var declension = ['год', 'года', 'лет'];
           <h1>
             {{ age }}
           </h1>
-          <p>{{ plural(age, declension) }} на рынке</p>
+          <p class="fw-bold">{{ plural(age, declension) }} на рынке</p>
         </li>
 
         <li class="f fd-col">
           <h1>
             {{ information.employees }}
           </h1>
-          <p>сотрудников</p>
+          <p class="fw-bold">сотрудников</p>
         </li>
 
         <li class="f fd-col">
           <h1>
             {{ information.clients }}
           </h1>
-          <p>постоянных клиентов</p>
+          <p class="fw-bold">постоянных клиентов</p>
         </li>
 
         <li class="f fd-col">
           <h1>
             {{ information.governmentOrganizations }}
           </h1>
-          <p>государственных организаций, сотрудничающих с нами</p>
+          <p class="fw-bold">
+            государственных организаций, сотрудничающих с нами
+          </p>
         </li>
       </ul>
     </div>
@@ -211,18 +252,6 @@ var declension = ['год', 'года', 'лет'];
     }
   }
 }
-.brand_slider {
-  --n-carousel-cg: 16px;
-  --n-carousel-action-tx: calc(100% + 8px);
-
-  img {
-    width: 98px;
-  }
-
-  &-wrap {
-    padding: 0 var(--n-ctrl-large-sz);
-  }
-}
 
 .info_section {
   position: relative;
@@ -235,6 +264,17 @@ var declension = ['год', 'года', 'лет'];
     width: 100%;
     height: 100%;
     filter: brightness(140%) blur(2px);
+  }
+  .mark-text {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    svg {
+      position: absolute;
+      top: 0;
+      width: 180px;
+      left: -30px;
+    }
   }
   .container {
     z-index: 1;

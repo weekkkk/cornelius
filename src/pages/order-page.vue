@@ -6,11 +6,14 @@ import { CONTACTS } from '@/router/modules/names';
 </script>
 
 <template>
-  <section class="px-4 bg-second-50 h-100 f fd-col ai-c jc-sb ai-c">
+  <section
+    class="px-4 bg-second-50 h-100 f fd-col ai-c jc-sb ai-c"
+    style="background-color: #b1bbbe"
+  >
     <div class="container mt-4 py-4 ta-c f fd-col rg-5">
-      <h1>Страница заказа</h1>
+      <h1 class='c-brand'>Страница заказа</h1>
 
-      <p class="fs-small-p">
+      <p class="fw-medium c-default">
         Мы предлагаем оптимизировать общение с нами размещением подробного
         заказа на нашем сайте.
       </p>
@@ -18,19 +21,19 @@ import { CONTACTS } from '@/router/modules/names';
       <div class="f cg-5 jc-c">
         <NButton
           style="width: 200px"
-          :color="EColor.Second"
+          :color="EColor.Brand"
           :size="ESize.Large"
           @click="router.push({ name: CONTACTS })"
         >
-          ОФОРМИТЬ ЗАКАЗ
+          <p class="fs-small-p">ОФОРМИТЬ ЗАКАЗ</p>
         </NButton>
         <NButton
           style="width: 200px"
-          :color="EColor.Second"
+          :color="EColor.Default"
           :size="ESize.Large"
           @click="router.push({ name: CONTACTS })"
         >
-          ЗАДАТЬ ВОПРОС
+          <p class="fs-small-p c-brand">ЗАДАТЬ ВОПРОС</p>
         </NButton>
       </div>
     </div>

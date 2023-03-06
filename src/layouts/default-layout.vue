@@ -28,10 +28,18 @@ const mobileMenuVisible = ref(false);
 
       <div class="contacts f cg-4 ai-c">
         <div class="f fw-wrap jc-fe cg-3 rg-1">
-          <a class="fs-small-p c-brand fw-medium" :href="`tel:${phone}`">
+          <a
+            class="f ai-c cg-2 fs-small-p c-brand fw-medium"
+            :href="`tel:${phone}`"
+          >
+            <span class="material-icons-round fs-p c-base"> phone </span>
             {{ phone }}
           </a>
-          <a class="fs-small-p c-brand fw-medium" :href="`mailto:${email}`">
+          <a
+            class="f ai-c cg-2 fs-small-p c-brand fw-medium"
+            :href="`mailto:${email}`"
+          >
+            <span class="material-icons-round fs-p c-base"> mail </span>
             {{ email }}
           </a>
         </div>
