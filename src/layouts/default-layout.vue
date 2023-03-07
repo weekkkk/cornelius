@@ -85,7 +85,7 @@ const mobileMenuVisible = ref(false);
     <RouterView />
   </main>
 
-  <footer class="bg-second-100 c-default f jc-c p-4">
+  <footer class="c-default f jc-c p-4" style="background-color: #4a4a4a">
     <div class="container f cg-4 rg-4">
       <img src="@/assets/images/logo.png" alt="Logo" height="54" />
 

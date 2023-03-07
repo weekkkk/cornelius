@@ -46,18 +46,18 @@
             <a
               class="c-base"
               target="_blank"
-              href="@/assets/documents/accreditation-0470-15.pdf"
+              href="@/assets/documents/accreditation-0709-19.pdf"
             >
-              Аккредитация 0470-15
+              Аккредитация 0709-19
             </a>
           </li>
           <li class="py-2 px-3">
             <a
               class="c-base"
               target="_blank"
-              href="@/assets/documents/accreditation-0488-15.pdf"
+              href="@/assets/documents/accreditation-0893-21.pdf"
             >
-              Аккредитация 0488-15
+              Аккредитация 0893-21
             </a>
           </li>
           <li class="py-2 px-3">

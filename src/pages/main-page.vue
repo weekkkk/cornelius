@@ -34,7 +34,7 @@ const slides: { image: string; title: string; description: string }[] = [
  * * Информация
  */
 const information = {
-  dateOfBirth: new Date(1997, 1, 17),
+  dateOfBirth: new Date(1997, 1, 18),
   employees: 30,
   clients: 30,
   governmentOrganizations: 160,

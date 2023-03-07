@@ -91,8 +91,8 @@ import NInput from '@/components/input/n-input.vue';
               <div class="f jc-sb">
                 <p class="fw-bold">Директор (Viber):</p>
                 <p class="fw-medium">
-                  <a class="c-brand" href="tel:+373 777 130084">
-                    +373 777 130084
+                  <a class="c-brand" href="tel:+373 777 13084">
+                    +373 777 13084
                   </a>
                   (8:00-17:00)
                 </p>
@@ -102,7 +102,7 @@ import NInput from '@/components/input/n-input.vue';
                 <p class="fw-bold">Проектный отдел:</p>
                 <p class="fw-medium">
                   <a class="c-brand" href="tel:+373 533 53720">
-                    +373 77895589
+                    +373 778 95589
                   </a>
                   (9:00-17:00)
                 </p>
