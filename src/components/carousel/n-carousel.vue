@@ -263,6 +263,22 @@ onUnmounted(() => {
   window.removeEventListener('touchend', touchend);
   window.removeEventListener('resize', onResize);
 });
+
+const countPoints = computed(() => {
+  let l = elements.value.length;
+  if (props.isLoop) l /= 2;
+  return Math.round(l);
+});
+const pointNumber = computed(() => {
+  let n;
+  if (offset.value < countPoints.value) n = offset.value + 1;
+  else n = offset.value - countPoints.value + 1;
+  return n || 1;
+});
+const goToPoint = (point: number) => {
+  // if (offset.value < countPoints.value)
+  offset.value = point - 1;
+};
 </script>
 
 <template>
@@ -313,6 +329,18 @@ onUnmounted(() => {
         <slot name="next" />
       </div>
     </Transition>
+
+    <div class="points">
+      <div
+        @mousedown.stop
+        @touchstart.stop
+        @click="goToPoint(point)"
+        class="point"
+        v-for="point in countPoints"
+        :key="point"
+        :class="{ active: pointNumber == point }"
+      />
+    </div>
   </div>
 </template>
 
@@ -326,6 +354,29 @@ onUnmounted(() => {
 
 <style lang="scss" scoped>
 .n-carousel {
+  .points {
+    display: inline-flex;
+    gap: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 16px;
+    .point {
+      cursor: pointer;
+      display: inline-flex;
+      width: 24px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: var(--n-default);
+      opacity: 0.5;
+      transition: 0.15s ease-in-out;
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+
   // pos
   position: relative;
   // flex
