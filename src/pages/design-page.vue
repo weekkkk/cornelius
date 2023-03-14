@@ -46,7 +46,7 @@
             <a
               class="c-base"
               target="_blank"
-              href="@/assets/documents/accreditation-0709-19.pdf"
+              href="documents/accreditation-0709-19.pdf"
             >
               Аккредитация 0709-19
             </a>
@@ -55,7 +55,7 @@
             <a
               class="c-base"
               target="_blank"
-              href="@/assets/documents/accreditation-0893-21.pdf"
+              href="documents/accreditation-0893-21.pdf"
             >
               Аккредитация 0893-21
             </a>
@@ -64,16 +64,7 @@
             <a
               class="c-base"
               target="_blank"
-              href="@/assets/documents/accreditation-0533-16.pdf"
-            >
-              Аккредитация 0533-16
-            </a>
-          </li>
-          <li class="py-2 px-3">
-            <a
-              class="c-base"
-              target="_blank"
-              href="@/assets/documents/accreditation-0687-19.pdf"
+              href="documents/accreditation-0687-19.pdf"
             >
               Аккредитация 0687-19
             </a>
@@ -82,7 +73,7 @@
             <a
               class="c-base"
               target="_blank"
-              href="@/assets/documents/license.pdf"
+              href="documents/license.pdf"
             >
               Лицензия ООО Корнелиус
             </a>
