@@ -1,3 +1,2 @@
-import * as Styles from './index.scss';
-
-export { Styles };
+const Styles = import('./index.scss')
+export { Styles }

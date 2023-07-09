@@ -1,2 +1,2 @@
-import * as Fonts from './index.scss';
-export { Fonts };
+const Fonts = import('./index.scss')
+export { Fonts }
