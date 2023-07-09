@@ -1,7 +1,13 @@
-<script setup lang="ts"></script>
+<script lang="ts" setup>
+import { HeaderLayout, ContentLayout } from '@/widgets'
+</script>
 
 <template>
-  <RouterView />
+  <HeaderLayout>
+    <ContentLayout>
+      <RouterView />
+    </ContentLayout>
+  </HeaderLayout>
 </template>
 
 <style></style>

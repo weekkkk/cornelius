@@ -17,4 +17,10 @@
     color: var(--n-base);
     background-color: var(--n-default);
   }
+
+  #app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 }
