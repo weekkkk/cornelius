@@ -101,7 +101,7 @@ import { MainPageVideo } from '@/app'
   }
   &-title {
     &-part {
-      animation: slide 10s infinite;
+      animation: slide 4s infinite;
       animation-delay: 1s;
     }
     &-wrap {
@@ -121,6 +121,11 @@ import { MainPageVideo } from '@/app'
       > h1 {
         height: calc(var(--n-fs-h1) * 1.5);
         overflow: hidden;
+        &:last-child {
+          @media (max-width: 800px) {
+            --n-fs-h1: 2.5rem;
+          }
+        }
       }
     }
   }
