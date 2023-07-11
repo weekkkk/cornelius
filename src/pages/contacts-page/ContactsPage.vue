@@ -59,7 +59,7 @@ import { TitleBlock } from '@/shared'
     :mobile-x-start="2"
     mobile-x-end="end"
     :mobile-y-start="4"
-    :mobile-y-end="2"
+    :mobile-y-end="5"
   >
     Адреса
   </TitleBlock>
@@ -87,8 +87,15 @@ import { TitleBlock } from '@/shared'
 
     vertical-align: top;
     @media (max-width: 800px) {
-      grid-row-start: 2;
-      grid-row-end: 3;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      grid-column-start: 2;
+      grid-column-end: 5;
+      font-size: 12px;
+      --n-fs-p: 12px !important;
+      td {
+        padding: 8px 0 !important;
+      }
     }
   }
   &-addresses_table {
@@ -98,6 +105,17 @@ import { TitleBlock } from '@/shared'
     grid-row-end: 4;
     font-size: 16px;
     vertical-align: top;
+    @media (max-width: 800px) {
+      grid-row-start: 5;
+      grid-row-end: end;
+      grid-column-start: 2;
+      grid-column-end: 5;
+      font-size: 12px;
+      --n-fs-p: 12px !important;
+      td {
+        padding: 8px 0 !important;
+      }
+    }
   }
   &-contacts_table,
   &-addresses_table {
@@ -112,6 +130,18 @@ import { TitleBlock } from '@/shared'
         text-align: right;
         // white-space: nowrap;
       }
+    }
+  }
+}
+</style>
+
+<style lang="scss">
+#contacts.page_li {
+  .page_li-content {
+    @media (max-width: 800px) {
+      grid-template-rows: var(--page-px) 1fr fit-content(100px) 1fr fit-content(
+          100px
+        ) var(--page-px);
     }
   }
 }
