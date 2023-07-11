@@ -1,2 +1,2 @@
-const NewsPage = () => import('./NewsPage.vue')
-export { NewsPage }
+import { defineAsyncComponent } from 'vue'
+export const NewsPage = defineAsyncComponent(() => import('./NewsPage.vue'))

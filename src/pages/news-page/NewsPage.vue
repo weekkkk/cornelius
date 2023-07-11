@@ -1,9 +1,21 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { TitleBlock } from '@/shared'
+</script>
 
 <template>
-  <div class="news_page f jc-c ai-c">
-    <h1 class="ta-c">Раздел находится в разработке</h1>
-  </div>
+  <TitleBlock
+    style="align-items: center"
+    :x-start="2"
+    x-end="end"
+    :y-start="1"
+    y-end="end"
+    :mobile-x-start="2"
+    mobile-x-end="end"
+    :mobile-y-start="1"
+    mobile-y-end="end"
+  >
+    <h2>Раздел находится в разработке</h2>
+  </TitleBlock>
 </template>
 
 <style lang="scss" scoped>

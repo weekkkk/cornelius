@@ -1,4 +1,2 @@
-const DesignPage = () => import('./DesignPage.vue')
-export { DesignPage }
-
-export * from './pages'
+import { defineAsyncComponent } from 'vue'
+export const DesignPage = defineAsyncComponent(() => import('./DesignPage.vue'))

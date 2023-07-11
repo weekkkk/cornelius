@@ -1,2 +1,3 @@
-const MainPage = () => import('./MainPage.vue')
-export { MainPage }
+import { defineAsyncComponent } from 'vue'
+
+export const MainPage = defineAsyncComponent(() => import('./MainPage.vue'))

@@ -1,13 +1,17 @@
-<script lang="ts" setup>
-import { HeaderLayout, ContentLayout } from '@/widgets'
-</script>
+<script lang="ts" setup></script>
 
 <template>
-  <HeaderLayout>
-    <ContentLayout>
-      <RouterView />
-    </ContentLayout>
-  </HeaderLayout>
+  <RouterView />
 </template>
 
-<style></style>
+<style lang="scss">
+html {
+  font-size: 20px;
+  @media (max-width: 1900px) {
+    font-size: 16px;
+  }
+}
+// ::-webkit-scrollbar {
+//   display: none;
+// }
+</style>

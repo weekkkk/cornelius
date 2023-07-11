@@ -7,10 +7,6 @@
     box-sizing: border-box;
   }
 
-  html {
-    font-size: 16px;
-  }
-
   body {
     font-family: 'Montserrat';
     line-height: var(--n-lh-regular);
@@ -20,7 +16,26 @@
 
   #app {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
+  }
+}
+
+:root {
+  button {
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+    border: none;
+    background-color: var(--n-brand);
+    color: var(--n-default);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    padding: 20px;
+    line-height: inherit;
+    &:hover {
+      filter: brightness(110%);
+    }
+    &:active {
+      filter: brightness(130%);
+    }
   }
 }
