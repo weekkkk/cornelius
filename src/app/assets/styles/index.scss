@@ -37,5 +37,9 @@
     &:active {
       filter: brightness(130%);
     }
+    @media (max-width: 800px) {
+      grid-template-rows: 1fr 1fr;
+      padding: 16px;
+    }
   }
 }

@@ -5,12 +5,13 @@
   --n-fs-small-p: 0.875rem;
   --n-fs-p: 1rem;
   --n-fs-h4: 1.125rem;
-  --n-fs-h3: 1.25rem;
+  --n-fs-h3: 2rem;
   --n-fs-h2: 6rem;
   --n-fs-h1: 6.5rem;
 
   @media (max-width: 800px) {
     --n-fs-h1: 2.25rem;
     --n-fs-h2: 2rem;
+    --n-fs-h3: 1.5rem;
   }
 }
