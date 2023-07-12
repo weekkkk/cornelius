@@ -24,11 +24,9 @@ const router = createRouter({
         if (window.innerWidth > 800) {
           window.scrollTo({ top: window.innerHeight * index })
         }
-
+        
         return {
           el: to.hash,
-          // top: savedPosition?.top,
-          behavior: 'smooth'
         }
       } else if (savedPosition) {
         return savedPosition
