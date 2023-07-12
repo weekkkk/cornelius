@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { MainPageVideo } from '@/app'
+import { TextBlock } from '@/shared'
 </script>
 
 <template>
@@ -84,7 +85,7 @@ import { MainPageVideo } from '@/app'
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     @media (max-width: 800px) {
-      grid-template-rows: 16px fit-content(200px) 1fr 16px;
+      grid-template-rows: 16px 1fr fit-content(200px) fit-content(600px) 16px;
     }
   }
   @keyframes slide {
@@ -110,8 +111,8 @@ import { MainPageVideo } from '@/app'
       overflow: hidden;
       grid-column-start: 2;
       grid-column-end: end;
-      grid-row-start: 2;
-      grid-row-end: 3;
+      grid-row-start: 3;
+      grid-row-end: 4;
       pre {
         font-family: inherit;
         font-size: inherit;
@@ -135,13 +136,13 @@ import { MainPageVideo } from '@/app'
   &-text {
     grid-column-start: 2;
     grid-column-end: 5;
-    grid-row-start: 3;
+    grid-row-start: 4;
     grid-row-end: end;
 
     @media (max-width: 800px) {
       --n-fs-p: 14px;
-      grid-row-start: 3;
-      grid-row-end: 4;
+      grid-row-start: 4;
+      grid-row-end: 5;
     }
   }
   &-achievements {
@@ -162,12 +163,24 @@ import { MainPageVideo } from '@/app'
   .main_page-title {
     transition: 1s ease;
   }
+  .main_page-text {
+    overflow: hidden;
+    > * {
+      transition: 1s ease;
+    }
+  }
 }
 .page_li:not(.page_li-active) {
   .main_page-title {
     transform: translateX(-100%);
     &-part {
       animation: none;
+    }
+  }
+  .main_page-text {
+    overflow: hidden;
+    > * {
+      transform: translateX(-100%);
     }
   }
 }

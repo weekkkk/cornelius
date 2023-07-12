@@ -136,9 +136,9 @@ onBeforeUnmount(() => {
     grid-template-rows: var(--page-px) repeat(5, 1fr) var(--page-px);
     @media (max-width: 800px) {
       --page-px: 16px;
-      grid-template-rows: var(--page-px) minmax(64px, 1fr) fit-content(100px) 1fr fit-content(100px) var(
-          --page-px
-        );
+      grid-template-rows: var(--page-px) 1fr fit-content(500px) 1fr fit-content(
+          200px
+        ) var(--page-px);
     }
   }
 }

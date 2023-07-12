@@ -23,7 +23,9 @@ const emit = defineEmits<{
   grid-column-end: v-bind(xEnd);
   grid-row-start: v-bind(yStart);
   grid-row-end: v-bind(yEnd);
+  overflow: hidden;
   > button {
+    transition: 1s ease;
     min-width: fit-content;
     white-space: nowrap;
   }
@@ -32,6 +34,16 @@ const emit = defineEmits<{
     grid-column-end: v-bind(mobileXEnd);
     grid-row-start: v-bind(mobileYStart);
     grid-row-end: v-bind(mobileYEnd);
+  }
+}
+</style>
+
+<style lang="scss">
+.page_li:not(.page_li-active) {
+  .button_block {
+    > button {
+      transform: translateY(-100%);
+    }
   }
 }
 </style>

@@ -20,6 +20,7 @@ const props = defineProps<GridPositionType>()
   grid-row-end: v-bind(yEnd);
   overflow: hidden;
   transform: translateY(32px);
+  z-index: 2;
   > h1 {
     transition: transform 1s ease;
   }

@@ -5,8 +5,10 @@ const props = defineProps<GridPositionType>()
 </script>
 
 <template>
-  <div class="text_block bg-second-0 fw-medium f fd-col jc-c rg-2">
-    <slot />
+  <div class="text_block fw-medium">
+    <div class="text_block-content bg-second-0 f fd-col jc-c rg-2">
+      <slot />
+    </div>
   </div>
 </template>
 
@@ -16,11 +18,19 @@ const props = defineProps<GridPositionType>()
   grid-column-end: v-bind(xEnd);
   grid-row-start: v-bind(yStart);
   grid-row-end: v-bind(yEnd);
-  padding: 32px 64px;
-  max-width: 100vw;
-  transition: 1s ease;
+  overflow: hidden;
+  &-content {
+    padding: 32px 64px;
+    max-width: 100vw;
+    transition: 1s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   @media (max-width: 800px) {
-    padding: 16px;
+    &-content {
+      padding: 16px;
+    }
     grid-column-start: v-bind(mobileXStart);
     grid-column-end: v-bind(mobileXEnd);
     grid-row-start: v-bind(mobileYStart);
@@ -31,10 +41,8 @@ const props = defineProps<GridPositionType>()
 
 <style lang="scss">
 .page_li:not(.page_li-active) {
-  .text_block {
-    max-width: 0;
-    padding-left: 0;
-    padding-right: 0;
+  .text_block-content {
+    transform: translateX(-100%);
     > * {
       opacity: 0;
       transition-delay: 0s;
@@ -42,9 +50,8 @@ const props = defineProps<GridPositionType>()
   }
 }
 .page_li {
-  .text_block {
+  .text_block-content {
     > * {
-      overflow: hidden;
       transition: 0.5s ease;
       transition-delay: 0.5s;
     }
