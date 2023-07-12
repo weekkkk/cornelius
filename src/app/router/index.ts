@@ -7,7 +7,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      component: LandingLayout
+      component: LandingLayout,
     }
   ],
   scrollBehavior: async (to, from, savedPosition) => {

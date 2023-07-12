@@ -84,7 +84,6 @@ onBeforeUnmount(() => {
       opacity: 1;
     }
   }
-  --page-px: 116px;
   &-bg {
     &-line {
       &:not(:last-child) {
@@ -117,15 +116,10 @@ onBeforeUnmount(() => {
     bottom: 0;
     display: grid;
     grid-template-columns: var(--page-px) repeat(7, 1fr) var(--page-px);
-    @media (max-width: 1600px) {
-      --page-px: 64px;
-    }
     @media (max-width: 1440px) {
-      --page-px: 32px;
       grid-template-columns: var(--page-px) repeat(5, 1fr) var(--page-px);
     }
     @media (max-width: 800px) {
-      --page-px: 16px;
       grid-template-columns: var(--page-px) repeat(3, 1fr) var(--page-px);
     }
   }
@@ -135,7 +129,6 @@ onBeforeUnmount(() => {
     transition-property: opacity;
     grid-template-rows: var(--page-px) repeat(5, 1fr) var(--page-px);
     @media (max-width: 800px) {
-      --page-px: 16px;
       grid-template-rows: var(--page-px) 1fr fit-content(500px) 1fr fit-content(
           200px
         ) var(--page-px);

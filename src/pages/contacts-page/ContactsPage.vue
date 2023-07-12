@@ -3,8 +3,8 @@ import { TitleBlock } from '@/shared'
 </script>
 
 <template>
+  <!-- style="transform: none" -->
   <TitleBlock
-    style="transform: none"
     :x-start="2"
     :x-end="5"
     :y-start="1"
@@ -50,8 +50,8 @@ import { TitleBlock } from '@/shared'
     </tr>
   </table>
 
+  <!-- style="transform: none" -->
   <TitleBlock
-    style="transform: none"
     :x-start="6"
     x-end="end"
     :y-start="1"
