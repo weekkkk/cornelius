@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 import { DesignImage1 } from '@/app'
 import { ButtonBlock, ImageBlock, TextBlock, TitleBlock } from '@/shared'
+import { inject } from 'vue'
+
+const contactFormModalVisible = inject('contactFormModalVisible')
 </script>
 
 <template>
@@ -64,6 +67,7 @@ import { ButtonBlock, ImageBlock, TextBlock, TitleBlock } from '@/shared'
     :mobile-x-end="4"
     :mobile-y-start="5"
     :mobile-y-end="6"
+    @click="contactFormModalVisible = true"
   >
     Получить предложение
   </ButtonBlock>

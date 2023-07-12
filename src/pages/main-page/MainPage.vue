@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { MainPageVideo } from '@/app'
-import { TextBlock } from '@/shared'
+import { inject } from 'vue'
+
+const contactFormModalVisible = inject('contactFormModalVisible')
 </script>
 
 <template>
@@ -47,7 +49,9 @@ import { TextBlock } from '@/shared'
           </div>
 
           <div class="f jc-s">
-            <button class="px-5">Получить предложение</button>
+            <button class="px-5" @click="contactFormModalVisible = true">
+              Получить предложение
+            </button>
           </div>
         </div>
       </div>
@@ -92,19 +96,19 @@ import { TextBlock } from '@/shared'
     0% {
       transform: translateY(0%);
     }
-    33% {
+    50% {
       transform: translateY(calc((-100% / 4) * 1));
     }
-    66% {
+    100% {
       transform: translateY(calc((-100% / 4) * 2));
     }
-    100% {
-      transform: translateY(calc((-100% / 4) * 3));
-    }
+    // 100% {
+    //   transform: translateY(calc((-100% / 4) * 3));
+    // }
   }
   &-title {
     &-part {
-      animation: slide 4s infinite;
+      animation: slide 4s forwards;
       animation-delay: 1s;
     }
     &-wrap {

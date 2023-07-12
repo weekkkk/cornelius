@@ -1,8 +1,9 @@
 <script lang="ts" setup>
-import { onMounted, type DefineComponent, onBeforeUnmount } from 'vue'
+import { onMounted, type DefineComponent, onBeforeUnmount, ref, provide } from 'vue'
 import { PageList, PagesNavbar, type PageType } from '@/entities'
 import * as pageComponents from '@/pages'
 import { CorneliusLogo } from '@/app'
+import { ContactForm } from '../contact-form'
 const pages: PageType<typeof pageComponents.MainPage>[] = [
   {
     id: 'main',
@@ -30,6 +31,9 @@ const pages: PageType<typeof pageComponents.MainPage>[] = [
     component: pageComponents.ContactsPage
   }
 ]
+
+const contactFormModalVisible = ref(false)
+provide('contactFormModalVisible', contactFormModalVisible)
 </script>
 
 <template>
@@ -42,6 +46,20 @@ const pages: PageType<typeof pageComponents.MainPage>[] = [
   </div>
 
   <PageList :pages="pages" />
+
+  <Teleport to="body">
+    <Transition name="landing_layout-modal-anim">
+      <div
+        v-if="contactFormModalVisible"
+        @click="contactFormModalVisible = false"
+        class="landing_layout-modal landing_layout-modal-contact_form f ai-c jc-c"
+      >
+        <div @click.stop class="p-3 bg-default">
+          <ContactForm />
+        </div>
+      </div>
+    </Transition>
+  </Teleport>
 </template>
 
 <style lang="scss" scoped>
@@ -59,6 +77,41 @@ const pages: PageType<typeof pageComponents.MainPage>[] = [
       padding: 16px 0;
       background-color: var(--n-default);
       // background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  &-modal {
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    &-anim {
+      &-enter-active,
+      &-leave-active {
+        transition: opacity 0.5s ease;
+      }
+
+      &-enter-from,
+      &-leave-to {
+        opacity: 0;
+      }
+    }
+    > div {
+      width: 600px;
+    }
+  }
+}
+</style>
+
+<style lang="scss">
+.landing_layout {
+  &-modal {
+    .contact_form {
+      button {
+        width: auto !important;
+      }
     }
   }
 }
