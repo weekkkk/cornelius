@@ -12,17 +12,23 @@ const router = createRouter({
   ],
   scrollBehavior: async (to, from, savedPosition) => {
     await nextTick()
-    console.log(savedPosition)
-    console.log(to.hash);
-    
+
+    console.log('hash', to.hash)
 
     if (to.hash) {
-      const element = document.querySelector(to.hash)
+      const element = document.querySelector(to.hash) as HTMLElement
 
       if (element) {
+        const index = Number(element.ariaRowIndex) || 0
+
+        if (window.innerWidth > 800) {
+          window.scrollTo({ top: window.innerHeight * index })
+        }
+
         return {
           el: to.hash,
-          top: savedPosition?.top
+          // top: savedPosition?.top,
+          behavior: 'smooth'
         }
       } else if (savedPosition) {
         return savedPosition

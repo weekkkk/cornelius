@@ -18,9 +18,15 @@ const handleScroll = () => {
   const scrollPosition = window.scrollY
   const pageDecimalIndex = Number((scrollPosition / window.innerHeight).toFixed(1))
   if (!page.value) return
-  const currentPageIndex = props.pages.indexOf(page.value)
-  const pageIndex =
-    pageDecimalIndex < currentPageIndex ? Math.ceil(pageDecimalIndex) : Math.floor(pageDecimalIndex)
+  let pageIndex = 0
+
+  if (window.innerWidth <= 800) {
+    const currentPageIndex = props.pages.indexOf(page.value)
+    pageIndex =
+      pageDecimalIndex < currentPageIndex
+        ? Math.ceil(pageDecimalIndex)
+        : Math.floor(pageDecimalIndex)
+  } else pageIndex = Math.round(pageDecimalIndex)
   const nextPage = props.pages[pageIndex]
   if (!page) return
   const newHash = `#${nextPage.id}`
@@ -39,7 +45,7 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="page_list f fd-col">
-    <PageLi v-for="(page, index) in pages" :key="page.id" :page="page" />
+    <PageLi v-for="(page, index) in pages" :key="page.id" :page="page" :index="index" />
   </div>
 </template>
 

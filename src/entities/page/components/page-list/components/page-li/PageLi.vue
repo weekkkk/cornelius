@@ -1,10 +1,11 @@
 <script lang="ts" setup generic="T">
-import { computed, onMounted } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import type { PageType } from '../../../../types'
 import { useRoute, useRouter } from 'vue-router'
 
 const props = defineProps<{
   page: PageType<T>
+  index: number
 }>()
 
 const route = useRoute()
@@ -15,13 +16,47 @@ const isActive = computed(() => {
   return route.hash == hash
 })
 
+const isReplace = ref(false)
+
 onMounted(() => {
-  if (isActive.value) router.replace({ hash })
+  setTimeout(() => {
+    if (isActive.value) {
+      router.replace({ hash })
+    }
+    isReplace.value = true
+  }, 1000)
+})
+
+const $el = ref<HTMLElement>()
+
+const isMobileActive = ref(false)
+
+const handleScroll = () => {
+  if (!$el.value || window.innerWidth > 800) return
+  if (props.index == 2) console.log('$el.value.offsetTop', window.scrollY / window.innerHeight)
+
+  if (props.index == Math.round(window.scrollY / window.innerHeight)) {
+    isMobileActive.value = true
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScroll)
 })
 </script>
 
 <template>
-  <div class="page_li" :class="{ 'page_li-active': isActive }" :id="page.id">
+  <div
+    class="page_li"
+    ref="$el"
+    :class="{ 'page_li-active': (isActive || isMobileActive) && isReplace }"
+    :aria-rowindex="index"
+    :id="page.id"
+  >
     <div class="page_li-bg">
       <div class="page_li-bg-line" v-for="i in 9" :key="i" />
     </div>
@@ -42,7 +77,7 @@ onMounted(() => {
     top: 0;
     bottom: 0;
     background-color: var(--n-default);
-    @media (min-width: 721px) {
+    @media (min-width: 800px) {
       position: sticky;
     }
     .page_li-content {
@@ -101,7 +136,9 @@ onMounted(() => {
     grid-template-rows: var(--page-px) repeat(5, 1fr) var(--page-px);
     @media (max-width: 800px) {
       --page-px: 16px;
-      grid-template-rows: var(--page-px) minmax(64px, 1fr) fit-content(100px) 30% 1fr var(--page-px);
+      grid-template-rows: var(--page-px) minmax(64px, 1fr) fit-content(100px) 1fr fit-content(100px) var(
+          --page-px
+        );
     }
   }
 }

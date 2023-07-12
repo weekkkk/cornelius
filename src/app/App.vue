@@ -11,7 +11,7 @@ html {
     font-size: 16px;
   }
 }
-// ::-webkit-scrollbar {
-//   display: none;
-// }
+::-webkit-scrollbar {
+  display: none;
+}
 </style>

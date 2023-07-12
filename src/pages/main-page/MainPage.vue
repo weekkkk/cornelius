@@ -9,18 +9,20 @@ import { MainPageVideo } from '@/app'
     </video>
 
     <div class="main_page-content c-default">
-      <div class="main_page-title-wrap f fw-wrap">
-        <h1 class="main_page-title c-default ff-OS">
-          <pre>Человек - </pre>
-        </h1>
-        <h1>
-          <div class="f fd-col main_page-title-part">
-            <pre>Мечтает</pre>
-            <pre>Желает</pre>
-            <pre>Материализует</pre>
-            <pre>Мечтает</pre>
-          </div>
-        </h1>
+      <div class="main_page-title-wrap">
+        <div class="main_page-title f fw-wrap">
+          <h1 class="c-default ff-OS">
+            <pre>Человек - </pre>
+          </h1>
+          <h1>
+            <div class="f fd-col main_page-title-part">
+              <pre>Мечтает</pre>
+              <pre>Желает</pre>
+              <pre>Материализует</pre>
+              <pre>Мечтает</pre>
+            </div>
+          </h1>
+        </div>
       </div>
 
       <div class="main_page-text f fd-col rg-2">
@@ -64,7 +66,7 @@ import { MainPageVideo } from '@/app'
   grid-row-end: end;
   video {
     object-fit: cover;
-    width: 130%;
+    width: 150%;
     height: 100%;
     grid-column-start: 1;
     grid-column-end: end;
@@ -82,7 +84,7 @@ import { MainPageVideo } from '@/app'
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     @media (max-width: 800px) {
-      grid-template-rows: 16px 0.5fr 1fr 16px;
+      grid-template-rows: 16px fit-content(200px) 1fr 16px;
     }
   }
   @keyframes slide {
@@ -105,6 +107,7 @@ import { MainPageVideo } from '@/app'
       animation-delay: 1s;
     }
     &-wrap {
+      overflow: hidden;
       grid-column-start: 2;
       grid-column-end: end;
       grid-row-start: 2;
@@ -118,7 +121,7 @@ import { MainPageVideo } from '@/app'
         --n-fs-h1: 3rem;
         justify-content: flex-end;
       }
-      > h1 {
+      h1 {
         height: calc(var(--n-fs-h1) * 1.5);
         overflow: hidden;
         &:last-child {
