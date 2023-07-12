@@ -59,7 +59,7 @@ import { TextBlock } from '@/shared'
 .main_page {
   display: grid;
   grid-template-columns: inherit;
-  grid-template-rows: inherit;
+  grid-template-rows: var(--page-px) fit-content(100px) fit-content(400px) var(--page-px);
   position: relative;
   grid-column-start: 1;
   grid-column-end: end;
@@ -108,11 +108,13 @@ import { TextBlock } from '@/shared'
       animation-delay: 1s;
     }
     &-wrap {
+      display: flex;
+      align-items: flex-end;
       overflow: hidden;
       grid-column-start: 2;
       grid-column-end: end;
-      grid-row-start: 3;
-      grid-row-end: 4;
+      grid-row-start: 2;
+      grid-row-end: 5;
       pre {
         font-family: inherit;
         font-size: inherit;
@@ -121,6 +123,9 @@ import { TextBlock } from '@/shared'
         flex-direction: column;
         --n-fs-h1: 3rem;
         justify-content: flex-end;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        align-items: flex-start;
       }
       h1 {
         height: calc(var(--n-fs-h1) * 1.5);
@@ -136,7 +141,7 @@ import { TextBlock } from '@/shared'
   &-text {
     grid-column-start: 2;
     grid-column-end: 5;
-    grid-row-start: 4;
+    grid-row-start: 5;
     grid-row-end: end;
 
     @media (max-width: 800px) {

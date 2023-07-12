@@ -34,7 +34,7 @@ const pages: PageType<typeof pageComponents.MainPage>[] = [
 
 <template>
   <div class="landing_layout-header-wrap">
-    <header class="landing_layout-header f jc-sb">
+    <header class="landing_layout-header f ai-c jc-sb">
       <img width="164" :src="CorneliusLogo" alt="Logo" />
 
       <PagesNavbar :pages="pages" />
@@ -56,7 +56,9 @@ const pages: PageType<typeof pageComponents.MainPage>[] = [
       right: 0;
       display: grid;
       grid-template-columns: var(--page-px) 1fr var(--page-px);
-      padding: 32px 0;
+      padding: 16px 0;
+      background-color: var(--n-default);
+      // background-color: rgba(255, 255, 255, 0.5);
     }
   }
 }

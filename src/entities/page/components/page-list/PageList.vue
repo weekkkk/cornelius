@@ -14,6 +14,8 @@ const page = computed(() => {
   return props.pages.find((page) => `#${page.id}` == route.hash)
 })
 
+const isNoScroll = ref(false)
+
 const handleScroll = () => {
   const scrollPosition = window.scrollY
   const pageDecimalIndex = Number((scrollPosition / window.innerHeight).toFixed(1))
@@ -31,6 +33,8 @@ const handleScroll = () => {
   if (!page) return
   const newHash = `#${nextPage.id}`
   if (route.hash == newHash) return
+  isNoScroll.value = false
+  if (window.innerWidth < 800) isNoScroll.value = true
   router.replace({ hash: newHash })
 }
 
