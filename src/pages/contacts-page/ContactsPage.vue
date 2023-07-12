@@ -20,7 +20,7 @@ import { ContactForm } from '@/widgets'
   <table class="contacts_page-contacts_table">
     <tr>
       <td>Почта</td>
-      <td>cornelius@gmai.com</td>
+      <td>corneliusgas@gmai.com</td>
     </tr>
     <tr>
       <td>Центральный офис (тел/факс)</td>
