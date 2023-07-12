@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { TitleBlock } from '@/shared'
+import { ContactForm } from '@/widgets'
 </script>
 
 <template>
@@ -74,10 +75,30 @@ import { TitleBlock } from '@/shared'
       <td>с. Суклея, ул. Котовского 81</td>
     </tr>
   </table>
+
+  <div class="contacts_page-contact_form-wrap f ai-fe">
+    <ContactForm class="w-100" />
+  </div>
 </template>
 
 <style lang="scss" scoped>
 .contacts_page {
+  &-contact_form {
+    &-wrap {
+      grid-column-start: 6;
+      grid-column-end: end;
+      grid-row-start: 4;
+      grid-row-end: end;
+      padding-bottom: var(--page-px);
+      padding-right: var(--page-px);
+      @media (max-width: 800px) {
+        grid-row-start: 6;
+        grid-row-end: end;
+        grid-column-start: 2;
+        grid-column-end: end;
+      }
+    }
+  }
   &-contacts_table {
     grid-column-start: 2;
     grid-column-end: 5;
@@ -91,8 +112,8 @@ import { TitleBlock } from '@/shared'
       grid-row-end: 4;
       grid-column-start: 2;
       grid-column-end: 5;
-      font-size: 12px;
-      --n-fs-p: 12px !important;
+      font-size: 8px;
+      --n-fs-p: 8px !important;
       td {
         padding: 8px 0 !important;
       }
@@ -107,11 +128,11 @@ import { TitleBlock } from '@/shared'
     vertical-align: top;
     @media (max-width: 800px) {
       grid-row-start: 5;
-      grid-row-end: end;
+      grid-row-end: 6;
       grid-column-start: 2;
       grid-column-end: 5;
-      font-size: 12px;
-      --n-fs-p: 12px !important;
+      font-size: 8px;
+      --n-fs-p: 8px !important;
       td {
         padding: 8px 0 !important;
       }
@@ -137,11 +158,18 @@ import { TitleBlock } from '@/shared'
 
 <style lang="scss">
 #contacts.page_li {
+  .title_block {
+    @media (max-width: 800px) {
+      transform: none !important;
+    }
+  }
   .page_li-content {
     @media (max-width: 800px) {
-      grid-template-rows: var(--page-px) 1fr fit-content(100px) 1fr fit-content(
+      grid-template-rows:
+        calc(var(--page-px) + 40px) 54px fit-content(100px) 54px fit-content(100px) fit-content(
           100px
-        ) var(--page-px);
+        )
+        var(--page-px);
     }
   }
 }
