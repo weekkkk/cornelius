@@ -23,8 +23,6 @@ onMounted(() => {
 
 const isAnim = inject('isAnim') as any
 
-// const router = useRouter()
-
 const goToHash = (hash: string) => {
   if (isAnim.value) return
   router.push({ hash })
@@ -80,15 +78,15 @@ const mobileMenuVisible = ref(false)
 
   <Teleport to="body">
     <div class="pages_navbar-nav_burder f fd-col ai-fe">
-      <RouterLink
+      <a
         v-for="page in pages"
         :key="page.id"
         class="pages_navbar-nav_burder-link"
         :class="{ 'pages_navbar-nav_burder-link-active': page.id == activePage?.id }"
         :to="{ hash: `#${page.id}` }"
-        @click="mobileMenuVisible = false"
+        @click="goToHash(`#${page.id}`)"
       >
-      </RouterLink>
+      </a>
     </div>
   </Teleport>
 </template>
