@@ -85,8 +85,9 @@ provide('contactFormModalVisible', contactFormModalVisible)
       right: 0;
       display: grid;
       grid-template-columns: var(--page-px) 1fr var(--page-px);
-      padding: 16px 0;
+      padding: 28px 0;
       @media (max-width: 800px) {
+        padding: 16px 0;
         background-color: var(--n-default);
       }
     }
