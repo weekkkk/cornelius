@@ -45,7 +45,9 @@ provide('contactFormModalVisible', contactFormModalVisible)
 <template>
   <div class="landing_layout-header-wrap">
     <header class="landing_layout-header f ai-c jc-sb">
-      <img width="164" :src="CorneliusLogo" alt="Logo" />
+      <RouterLink class="f" :to="{ hash: '#main' }">
+        <img width="164" :src="CorneliusLogo" alt="Logo" />
+      </RouterLink>
 
       <PagesNavbar :pages="pages">
         <a style="text-decoration: none; color: inherit" href="tel:+373 777 83485">
