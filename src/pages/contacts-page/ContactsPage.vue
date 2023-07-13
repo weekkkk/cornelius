@@ -21,7 +21,7 @@ import { ContactForm, SocialLinks } from '@/widgets'
     <table>
       <tr>
         <td>Почта</td>
-        <td>corneliusgas@gmai.com</td>
+        <td>corneliusgas@gmail.com</td>
       </tr>
       <tr>
         <td>Центральный офис (тел/факс)</td>
@@ -126,7 +126,6 @@ import { ContactForm, SocialLinks } from '@/widgets'
         display: none;
       }
     }
-
   }
   &-addresses_table {
     grid-column-start: 6;

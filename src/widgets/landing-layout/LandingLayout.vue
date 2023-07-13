@@ -26,11 +26,11 @@ const pages: PageType<typeof pageComponents.MainPage>[] = [
     title: 'Аккредитации',
     component: pageComponents.AccreditationsPage
   },
-  {
-    id: 'news',
-    title: 'Новости',
-    component: pageComponents.NewsPage
-  },
+  // {
+  //   id: 'news',
+  //   title: 'Новости',
+  //   component: pageComponents.NewsPage
+  // },
   {
     id: 'contacts',
     title: 'Контакты',

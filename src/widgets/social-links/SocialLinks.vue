@@ -4,15 +4,15 @@ import { TelegramIcon, WhatsAppIcon, ViberIcon } from '@/app'
 
 <template>
   <div class="f g-4 jc-c social_links fw-bold c-second-100">
-    <a class="f fd-col ta-c" href="https://tlgg.ru/cornelius_gas">
+    <a class="f fd-col ai-c ta-c" href="https://tlgg.ru/cornelius_gas">
       <img :src="TelegramIcon" width="80" />
       <p>Telegram</p>
     </a>
-    <a class="f fd-col ta-c" href="viber://chat?number=%2B37377783485/">
+    <a class="f fd-col ai-c ta-c" href="viber://chat?number=%2B37377783485/">
       <img :src="WhatsAppIcon" width="80" />
       <p>WhatsApp</p>
     </a>
-    <a class="f fd-col ta-c" href="https://wa.me/37377783485">
+    <a class="f fd-col ai-c ta-c" href="https://wa.me/37377783485">
       <img :src="ViberIcon" width="80" />
       <p>Viber</p>
     </a>

@@ -14,4 +14,8 @@ html {
 ::-webkit-scrollbar {
   display: none;
 }
+::selection {
+  color: var(--n-default);
+  background-color: var(--n-brand);
+}
 </style>
