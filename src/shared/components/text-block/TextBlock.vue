@@ -6,7 +6,7 @@ const props = defineProps<GridPositionType>()
 
 <template>
   <div class="text_block fw-medium">
-    <div class="text_block-content bg-second-0 f fd-col jc-c rg-2">
+    <div class="text_block-content bg-second-0 f fd-col rg-2">
       <slot />
     </div>
   </div>
@@ -20,16 +20,17 @@ const props = defineProps<GridPositionType>()
   grid-row-end: v-bind(yEnd);
   overflow: hidden;
   &-content {
-    padding: 32px 64px;
+    padding: var(--text_block-padding);
     max-width: 100vw;
     transition: 1s ease;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    justify-content: var(--text_block-jc);
   }
   @media (max-width: 800px) {
     &-content {
-      padding: 16px;
+      --text_block-padding: 16px;
     }
     grid-column-start: v-bind(mobileXStart);
     grid-column-end: v-bind(mobileXEnd);
@@ -40,6 +41,10 @@ const props = defineProps<GridPositionType>()
 </style>
 
 <style lang="scss">
+:root {
+  --text_block-padding: 32px 64px;
+  --text_block-jc: center;
+}
 .page_li:not(.page_li-active) {
   .text_block-content {
     transform: translateX(-100%);

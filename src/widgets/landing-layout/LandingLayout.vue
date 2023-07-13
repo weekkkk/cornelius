@@ -21,6 +21,11 @@ const pages: PageType<typeof pageComponents.MainPage>[] = [
     component: pageComponents.DesignPage
   },
   {
+    id: 'accreditations',
+    title: 'Аккредитации',
+    component: pageComponents.AccreditationsPage
+  },
+  {
     id: 'news',
     title: 'Новости',
     component: pageComponents.NewsPage
