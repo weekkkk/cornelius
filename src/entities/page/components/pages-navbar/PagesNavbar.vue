@@ -38,6 +38,8 @@ const mobileMenuVisible = ref(false)
     >
       {{ page.title }}
     </RouterLink>
+
+    <p class="pages_navbar-link">+373 777 83485</p>
   </div>
   <img
     class="pages_navbar-burger"
