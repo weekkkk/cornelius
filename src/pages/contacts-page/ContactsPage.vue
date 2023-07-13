@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { TitleBlock } from '@/shared'
-import { ContactForm } from '@/widgets'
+import { ContactForm, SocialLinks } from '@/widgets'
 </script>
 
 <template>
@@ -17,39 +17,44 @@ import { ContactForm } from '@/widgets'
   >
     Контакты
   </TitleBlock>
-  <table class="contacts_page-contacts_table">
-    <tr>
-      <td>Почта</td>
-      <td>corneliusgas@gmai.com</td>
-    </tr>
-    <tr>
-      <td>Центральный офис (тел/факс)</td>
-      <td>
-        <p>+373 533 83481 (9:00-17:00)</p>
-        <p>+373 777 83485 (9:00-17:00)</p>
-      </td>
-    </tr>
-    <tr>
-      <td>Производственно-техническая база с. Суклея</td>
-      <td>+373 777 66761 (8:00-17:00)</td>
-    </tr>
-    <tr>
-      <td>ПТО, Маркетинг (Viber/WhatsApp)</td>
-      <td>+373 795 35511 (9:00-17:00)</td>
-    </tr>
-    <tr>
-      <td>Директор (Viber)</td>
-      <td>+373 777 13084 (8:00-17:00)</td>
-    </tr>
-    <tr>
-      <td>Проектный отдел</td>
-      <td>+373 778 95589 (9:00-17:00)</td>
-    </tr>
-    <tr>
-      <td>Бухгалтерия</td>
-      <td>+373 533 53721 (9:00-17:00)</td>
-    </tr>
-  </table>
+  <div class="contacts_page-contacts_table f fd-col">
+    <table>
+      <tr>
+        <td>Почта</td>
+        <td>corneliusgas@gmai.com</td>
+      </tr>
+      <tr>
+        <td>Центральный офис (тел/факс)</td>
+        <td>
+          <p>+373 533 83481 (9:00-17:00)</p>
+          <p>+373 777 83485 (9:00-17:00)</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Производственно-техническая база с. Суклея</td>
+        <td>+373 777 66761 (8:00-17:00)</td>
+      </tr>
+      <tr>
+        <td>ПТО, Маркетинг (Viber/WhatsApp)</td>
+        <td>+373 795 35511 (9:00-17:00)</td>
+      </tr>
+      <tr>
+        <td>Директор (Viber)</td>
+        <td>+373 777 13084 (8:00-17:00)</td>
+      </tr>
+      <tr>
+        <td>Проектный отдел</td>
+        <td>+373 778 95589 (9:00-17:00)</td>
+      </tr>
+      <tr>
+        <td>Бухгалтерия</td>
+        <td>+373 533 53721 (9:00-17:00)</td>
+      </tr>
+    </table>
+    <div class="f contacts_page-contacts_table-social_links">
+      <SocialLinks />
+    </div>
+  </div>
 
   <!-- style="transform: none" -->
   <TitleBlock
@@ -117,7 +122,11 @@ import { ContactForm } from '@/widgets'
       td {
         padding: 8px 0 !important;
       }
+      &-social_links {
+        display: none;
+      }
     }
+
   }
   &-addresses_table {
     grid-column-start: 6;

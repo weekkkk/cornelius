@@ -4,6 +4,7 @@ import { PageList, PagesNavbar, type PageType } from '@/entities'
 import * as pageComponents from '@/pages'
 import { CorneliusLogo } from '@/app'
 import { ContactForm } from '../contact-form'
+import { SocialLinks } from '..'
 const pages: PageType<typeof pageComponents.MainPage>[] = [
   {
     id: 'main',
@@ -46,7 +47,12 @@ provide('contactFormModalVisible', contactFormModalVisible)
     <header class="landing_layout-header f ai-c jc-sb">
       <img width="164" :src="CorneliusLogo" alt="Logo" />
 
-      <PagesNavbar :pages="pages" />
+      <PagesNavbar :pages="pages">
+        <a style="text-decoration: none; color: inherit" href="tel:+373 777 83485">
+          <h1 class="ff-OS">+373 777 83485</h1>
+        </a>
+        <SocialLinks class="w-100" />
+      </PagesNavbar>
     </header>
   </div>
 

@@ -33,7 +33,6 @@ const isMobileActive = ref(false)
 
 const handleScroll = () => {
   if (!$el.value || window.innerWidth > 800) return
-  if (props.index == 2) console.log('$el.value.offsetTop', window.scrollY / window.innerHeight)
 
   if (props.index == Math.round(window.scrollY / window.innerHeight)) {
     isMobileActive.value = true

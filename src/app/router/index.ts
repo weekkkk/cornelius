@@ -13,8 +13,6 @@ const router = createRouter({
   scrollBehavior: async (to, from, savedPosition) => {
     await nextTick()
 
-    console.log('hash', to.hash)
-
     if (to.hash) {
       const element = document.querySelector(to.hash) as HTMLElement
 

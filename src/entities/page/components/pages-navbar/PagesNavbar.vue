@@ -45,7 +45,7 @@ const mobileMenuVisible = ref(false)
   />
   <Teleport to="body">
     <Transition name="pages_navbar-mobile_menu-anim">
-      <div class="pages_navbar-mobile_menu p-3" v-if="mobileMenuVisible">
+      <div class="pages_navbar-mobile_menu p-3 f fd-col jc-sb rg-3" v-if="mobileMenuVisible">
         <div class="f fd-col rg-3">
           <RouterLink
             v-for="page in pages"
@@ -60,6 +60,7 @@ const mobileMenuVisible = ref(false)
             </h1>
           </RouterLink>
         </div>
+        <slot />
       </div>
     </Transition>
   </Teleport>
