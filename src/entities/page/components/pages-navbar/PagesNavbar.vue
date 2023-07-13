@@ -21,7 +21,7 @@ onMounted(() => {
   }
 })
 
-const isAnim = inject('isAnim')
+const isAnim = inject('isAnim') as any
 
 // const router = useRouter()
 

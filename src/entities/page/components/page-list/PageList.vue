@@ -1,5 +1,5 @@
 <script lang="ts" setup generic="T">
-import { computed, inject, onBeforeUnmount, onMounted, provide, ref } from 'vue'
+import { computed, inject, onBeforeUnmount, onMounted, provide, ref, type Ref } from 'vue'
 import type { PageType } from '../../types'
 import { PageLi } from './components'
 import { useRoute, useRouter } from 'vue-router'
@@ -15,6 +15,8 @@ const page = computed(() => {
 })
 
 const isNoScroll = ref(false)
+
+const isAnim = inject('isAnim') as any
 
 const handleScroll = () => {
   if (isAnim.value) return
@@ -52,8 +54,6 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll)
 })
-
-const isAnim = inject('isAnim')
 </script>
 
 <template>
