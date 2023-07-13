@@ -1,5 +1,5 @@
 <script lang="ts" setup generic="T">
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import type { PageType } from '../../../../types'
 import { useRoute, useRouter } from 'vue-router'
 
@@ -14,6 +14,22 @@ const hash = `#${props.page.id}`
 
 const isActive = computed(() => {
   return route.hash == hash
+})
+
+const emit = defineEmits<{
+  (e: 'start-anim'): void
+  (e: 'stop-anim'): void
+}>()
+
+watch(isActive, () => {
+  if (window.innerWidth <= 800) return
+  if (isActive.value) {
+    emit('start-anim')
+    setTimeout(() => {
+      emit('stop-anim')
+      window.scrollTo({ top: window.innerHeight * props.index })
+    }, 1000)
+  }
 })
 
 const isReplace = ref(false)
@@ -128,9 +144,9 @@ onBeforeUnmount(() => {
     transition-property: opacity;
     grid-template-rows: var(--page-px) repeat(5, 1fr) var(--page-px);
     @media (max-width: 800px) {
-      grid-template-rows: var(--page-px) 1fr fit-content(500px) 1fr fit-content(
-          200px
-        ) var(--page-px);
+      grid-template-rows:
+        var(--page-px) 1fr fit-content(500px) 1fr fit-content(200px)
+        var(--page-px);
     }
   }
 }
