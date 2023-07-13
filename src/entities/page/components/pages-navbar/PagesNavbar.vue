@@ -25,8 +25,10 @@ const mobileMenuVisible = ref(false)
 </script>
 
 <template>
-  <div class="pages_navbar f ai-c cg-3 fw-medium ff-OS">
-    <!-- :class="{ 'c-default': activePage?.id == 'main' }" -->
+  <div
+    class="pages_navbar f ai-c cg-3 fw-medium ff-OS"
+    :class="{ 'c-default': activePage?.id == 'main' }"
+  >
     <RouterLink
       v-for="page in pages"
       :key="page.id"
