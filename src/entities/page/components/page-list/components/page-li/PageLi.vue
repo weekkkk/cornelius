@@ -100,6 +100,7 @@ onBeforeUnmount(() => {
     }
   }
   &-bg {
+    opacity: 0;
     &-line {
       &:not(:last-child) {
         border-right: 1px solid var(--n-second-0);
