@@ -1,5 +1,5 @@
 <script lang="ts" setup generic="T">
-import { computed, onMounted, ref } from 'vue'
+import { computed, inject, onMounted, ref, type Ref } from 'vue'
 import type { PageType } from '../..'
 import { useRoute, useRouter } from 'vue-router'
 import { BurgerIcon } from '@/app'
@@ -21,6 +21,15 @@ onMounted(() => {
   }
 })
 
+const isAnim = inject('isAnim')
+
+// const router = useRouter()
+
+const goToHash = (hash: string) => {
+  if (isAnim.value) return
+  router.push({ hash })
+}
+
 const mobileMenuVisible = ref(false)
 </script>
 
@@ -29,15 +38,15 @@ const mobileMenuVisible = ref(false)
     class="pages_navbar f ai-c cg-3 fw-medium ff-OS"
     :class="{ 'c-default': activePage?.id == 'main' }"
   >
-    <RouterLink
+    <a
       v-for="page in pages"
       :key="page.id"
       class="pages_navbar-link"
       :class="{ 'pages_navbar-link-active': page.id == activePage?.id }"
-      :to="{ hash: `#${page.id}` }"
+      @click="goToHash(`#${page.id}`)"
     >
       {{ page.title }}
-    </RouterLink>
+    </a>
 
     <p class="pages_navbar-link">+373 777 83485</p>
   </div>

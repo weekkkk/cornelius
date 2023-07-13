@@ -38,6 +38,9 @@ const pages: PageType<typeof pageComponents.MainPage>[] = [
   }
 ]
 
+const isAnim = ref(false)
+provide('isAnim', isAnim)
+
 const contactFormModalVisible = ref(false)
 provide('contactFormModalVisible', contactFormModalVisible)
 </script>

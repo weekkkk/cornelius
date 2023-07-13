@@ -1,5 +1,5 @@
 <script lang="ts" setup generic="T">
-import { computed, onBeforeUnmount, onMounted, provide, ref } from 'vue'
+import { computed, inject, onBeforeUnmount, onMounted, provide, ref } from 'vue'
 import type { PageType } from '../../types'
 import { PageLi } from './components'
 import { useRoute, useRouter } from 'vue-router'
@@ -36,7 +36,6 @@ const handleScroll = () => {
         ? Math.floor(pageDecimalIndex)
         : Math.ceil(pageDecimalIndex)
   }
-  console.log({ pageDecimalIndex })
   const nextPage = props.pages[pageIndex]
   if (!page) return
   const newHash = `#${nextPage.id}`
@@ -54,7 +53,7 @@ onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 
-const isAnim = ref(false)
+const isAnim = inject('isAnim')
 </script>
 
 <template>
