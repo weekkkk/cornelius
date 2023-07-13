@@ -57,7 +57,7 @@ import { ContactForm, SocialLinks } from '@/widgets'
   </div>
 
   <!-- style="transform: none" -->
-  <TitleBlock
+  <!-- <TitleBlock
     :x-start="6"
     x-end="end"
     :y-start="1"
@@ -68,12 +68,13 @@ import { ContactForm, SocialLinks } from '@/widgets'
     :mobile-y-end="5"
   >
     Адреса
-  </TitleBlock>
+  </TitleBlock> -->
 
   <table class="contacts_page-addresses_table">
     <tr>
       <td>Центральный офис</td>
-      <td>Молдова, г.Тирасполь, ул. Карла-Либкнехта 385, каб. 201, 202, 204</td>
+      <td>Молдова, г.Тирасполь, ул. Карла-Либкнехта 385</td>
+      <!-- каб. 201, 202, 204 -->
     </tr>
     <tr>
       <td>Производственно-техническая база</td>
