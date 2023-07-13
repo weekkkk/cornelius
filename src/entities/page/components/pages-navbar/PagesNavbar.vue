@@ -101,11 +101,15 @@ const mobileMenuVisible = ref(false)
       &:not(.pages_navbar-nav_burder-link-active) {
         &:hover {
           opacity: 0.8;
+          width: 38px;
         }
         &:active {
           opacity: 0.9;
         }
       }
+    }
+    @media (max-width: 800px) {
+      display: none;
     }
   }
   &-link {
