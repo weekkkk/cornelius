@@ -71,8 +71,8 @@ const contactFormModalVisible = inject('contactFormModalVisible')
   grid-row-end: end;
   video {
     object-fit: cover;
-    width: 150%;
-    height: 100%;
+    width: 100%;
+    height: 120%;
     grid-column-start: 1;
     grid-column-end: end;
     grid-row-start: 1;
