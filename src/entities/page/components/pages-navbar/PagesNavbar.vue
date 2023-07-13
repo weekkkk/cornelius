@@ -64,10 +64,50 @@ const mobileMenuVisible = ref(false)
       </div>
     </Transition>
   </Teleport>
+
+  <Teleport to="body">
+    <div class="pages_navbar-nav_burder f fd-col ai-fe">
+      <RouterLink
+        v-for="page in pages"
+        :key="page.id"
+        class="pages_navbar-nav_burder-link"
+        :class="{ 'pages_navbar-nav_burder-link-active': page.id == activePage?.id }"
+        :to="{ hash: `#${page.id}` }"
+        @click="mobileMenuVisible = false"
+      >
+      </RouterLink>
+    </div>
+  </Teleport>
 </template>
 
 <style lang="scss" scoped>
 .pages_navbar {
+  &-nav_burder {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    z-index: 100;
+    transform: translateY(-50%);
+    row-gap: 20px;
+    &-link {
+      height: 5px;
+      width: 28px;
+      background-color: var(--n-second-25);
+      transition: 0.5s ease;
+      &.pages_navbar-nav_burder-link-active {
+        width: 58px;
+        background-color: var(--n-brand);
+      }
+      &:not(.pages_navbar-nav_burder-link-active) {
+        &:hover {
+          opacity: 0.8;
+        }
+        &:active {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
   &-link {
     color: inherit;
     text-decoration: none;
