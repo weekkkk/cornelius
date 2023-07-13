@@ -20,6 +20,9 @@
 }
 
 :root {
+  a {
+    cursor: pointer;
+  }
   button {
     cursor: pointer;
     transition: 0.25s ease-in-out;
