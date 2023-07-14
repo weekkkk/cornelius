@@ -14,6 +14,4 @@ export const send = async (contact) => {
     Subject: `Заяка на звонок с corenelius.md ${contact.phone}`,
     Body: ebody
   })
-
-  if (message) alert(message)
 }
