@@ -71,7 +71,7 @@ provide('contactFormModalVisible', contactFormModalVisible)
         class="landing_layout-modal landing_layout-modal-contact_form f ai-c jc-c"
       >
         <div @click.stop class="p-3 bg-default">
-          <ContactForm />
+          <ContactForm @success="contactFormModalVisible = false" />
         </div>
       </div>
     </Transition>

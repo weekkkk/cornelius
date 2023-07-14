@@ -3,7 +3,7 @@ import { computed, onMounted, ref } from 'vue'
 import type { ContactType } from './types'
 import { reactive } from 'vue'
 import { MailService } from '@/shared'
-import { Email } from './smtp'
+import { send } from './mail'
 
 const contact: ContactType = reactive({
   phone: '',
@@ -15,54 +15,14 @@ const contact: ContactType = reactive({
 
 const isLoading = ref(false)
 
-const sendMail = () => {
+const sendMail = async () => {
   isLoading.value = true
 
-  const formData = new FormData()
-  formData.append('from', 'nikita.nedelko.job@gmail.com') // Replace with your email address
-  formData.append('to', 'nikita.nedelko.life@gmail.com') // Replace with the recipient's email address
-  formData.append('subject', 'Test email') // Replace with the subject of your email
-  formData.append('text', 'Hello, this is a test email.') // Replace with the body of your email
+  await send(contact)
 
-  fetch('https://api.mailgun.net/v3/YOUR_DOMAIN_NAME/messages', {
-    method: 'POST',
-    headers: {
-      Authorization: 'Basic ' + btoa('api:YOUR_API_KEY') // Замените YOUR_API_KEY на ваш API-ключ Mailgun
-    },
-    body: formData
-  })
-    .then((response) => {
-      if (response.ok) {
-        console.log('Сообщение успешно отправлено')
-      } else {
-        console.error('Ошибка при отправке сообщения:', response.statusText)
-      }
-    })
-    .catch((error) => {
-      console.error('Ошибка при отправке сообщения:', error)
-    })
-    .finally(() => {
-      isLoading.value
-    })
+  isLoading.value = false
 
-  // Email.send({
-  //   Host: 'smtp.elasticemail.com',
-  //   Username: 'username',
-  //   Password: 'password',
-  //   To: 'them@website.com',
-  //   From: 'you@isp.com',
-  //   Subject: 'This is the subject',
-  //   Body: 'And this is the body'
-  // })
-
-  // await mailService.sendMail({
-  //   from: '"Fred Foo 👻" <foo@example.com>',
-  //   to: 'nikita.nedelko.job@gmail.com',
-  //   subject: 'Hello ✔', // Subject line
-  //   text: 'Hello world?', // plain text body
-  //   html: '<b>Hello world?</b>' // html body
-  // })
-  // emit('success')
+  emit('success')
 }
 
 const emit = defineEmits<{
@@ -156,7 +116,7 @@ const phoneError = computed(() => {
   }
 }
 .button-loader {
-  min-height: 8px;
+  min-height: 16px;
   display: flex;
   align-items: center;
   gap: 8px;
