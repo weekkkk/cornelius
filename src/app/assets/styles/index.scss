@@ -34,11 +34,16 @@
     font-weight: bold;
     padding: 20px;
     line-height: inherit;
-    &:hover {
-      filter: brightness(110%);
+    &:disabled {
+      cursor: not-allowed;
     }
-    &:active {
-      filter: brightness(130%);
+    &:not(:disabled) {
+      &:hover {
+        filter: brightness(110%);
+      }
+      &:active {
+        filter: brightness(130%);
+      }
     }
     @media (max-width: 800px) {
       grid-template-rows: 1fr 1fr;
