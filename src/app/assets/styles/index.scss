@@ -34,6 +34,9 @@
     font-weight: bold;
     padding: 20px;
     line-height: inherit;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     &:disabled {
       cursor: not-allowed;
     }
