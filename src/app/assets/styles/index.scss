@@ -14,7 +14,13 @@
     background-color: var(--n-default);
   }
 
+  --corn-page-px: 120px;
+  --corn-page-py: 120px;
+
   #app {
     height: 100vh;
+    display: grid;
+    grid-template-columns: var(--corn-page-px) repeat(7, 1fr) var(--corn-page-px);
+    grid-template-rows: var(--corn-page-py) repeat(7, 1fr) var(--corn-page-py);
   }
 }
