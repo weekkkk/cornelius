@@ -38,7 +38,7 @@ const phoneError = computed(() => {
   <div class="contact_form f fd-col ai-fs rg-4">
     <div class="f fd-col rg-3 w-100">
       <div class="f fd-col rg-2">
-        <input v-model="contact.phone" type="text" placeholder="Введите ваше телефон" />
+        <input v-model="contact.phone" type="text" placeholder="Введите ваш телефон" />
       </div>
       <input
         v-model="contact.name"
