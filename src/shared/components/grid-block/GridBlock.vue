@@ -5,8 +5,9 @@ const props = defineProps<GridPositionType>()
 </script>
 
 <template>
-  <figure class="grid_block">
-  </figure>
+  <div class="grid_block f fd-col">
+    <slot />
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -21,5 +22,6 @@ const props = defineProps<GridPositionType>()
     height: 100%;
     object-fit: cover;
   }
+  // background-color: rgba(0, 0, 0, 0.5);
 }
 </style>

@@ -9,10 +9,7 @@
 
 <style lang="scss">
 html {
-  font-size: 20px;
-  @media (max-width: 1900px) {
-    font-size: 16px;
-  }
+  font-size: 0.9375vw;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -32,7 +29,7 @@ html {
     grid-row-start: 1;
     grid-row-end: end;
     &:not(:last-child) {
-      border-right: 1px solid var(--n-second-25);
+      border-right: 1px solid var(--n-second-0);
     }
   }
 }

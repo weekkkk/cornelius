@@ -12,15 +12,46 @@
     line-height: var(--n-lh-regular);
     color: var(--n-base);
     background-color: var(--n-default);
+    overflow: hidden;
   }
 
-  --corn-page-px: 120px;
-  --corn-page-py: 120px;
+  --corn-page-px: 6.25vw;
+  --corn-page-py: 6.25vw;
 
   #app {
-    height: 100vh;
     display: grid;
     grid-template-columns: var(--corn-page-px) repeat(7, 1fr) var(--corn-page-px);
     grid-template-rows: var(--corn-page-py) repeat(7, 1fr) var(--corn-page-py);
+    min-height: 100vh;
+  }
+
+  .text_block {
+    background-color: var(--n-second-0);
+    padding: 3.88888889rem 5.55555556rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.44444444rem;
+    > p {
+      z-index: 2;
+    }
+  }
+  button {
+    background-color: var(--n-brand);
+    border: none;
+    color: var(--n-default);
+    padding: 1rem;
+    font-size: .88888889rem;
+    line-height: var(--n-lh-no);
+    font-family: inherit;
+    width: calc(100% / 3);
+    min-height: fit-content;
+    font-weight: var(--n-fw-bold);
+    &:not(:disabled){ 
+      cursor: pointer;
+    }
+  }
+  h1 {
+    line-height: var(--n-lh-no);
+    margin-bottom: 4rem;
   }
 }
