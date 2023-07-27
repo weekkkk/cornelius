@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "MqPvXk2rNsnB51tFW5zQggD56y7UokE8b4ByDObBZdMAPOALG5W4YLqJj69tgH4QfxSegcEdFbaKB6WOyqSSfw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\admin\\RiderProjects\\cornelius\\Cornelius\\Cornelius.Providers\\Cornelius.Providers.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.15\\microsoft.netcore.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.15\\microsoft.windowsdesktop.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.15\\microsoft.aspnetcore.app.ref.6.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cornelius.Models", "Cornelius.Models", "{624FEEEC-E9AA-4429-99D3-749A7851CDED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cornelius.Infrastructure", "Cornelius.Infrastructure", "{9BC88EC4-0988-452A-8303-EDA848266AC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cornelius.Services", "Cornelius.Services", "{A8BCBB94-B4E3-43A8-9237-98C3118C56FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cornelius.ToolsAndTest", "Cornelius.ToolsAndTest", "{F69BEEDF-C6E2-4D7D-9BCA-FFA6E3AC569D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cornelius.Domain", "Cornelius.Domain\Cornelius.Domain.csproj", "{2FC003B6-B867-404E-A942-65428DB6A065}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cornelius.Services", "Cornelius.Services\Cornelius.Services.csproj", "{C4E2DE6A-82CF-477B-B3F4-95C81CDA5607}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cornelius.API", "Cornelius.API\Cornelius.API.csproj", "{D8A74755-EBE2-4102-9E82-EF1E228BB180}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cornelius.Providers", "Cornelius.Providers\Cornelius.Providers.csproj", "{C3038DA7-1C5A-48F4-B8B6-014E1CEC822E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2FC003B6-B867-404E-A942-65428DB6A065} = {624FEEEC-E9AA-4429-99D3-749A7851CDED}
+		{C4E2DE6A-82CF-477B-B3F4-95C81CDA5607} = {A8BCBB94-B4E3-43A8-9237-98C3118C56FF}
+		{D8A74755-EBE2-4102-9E82-EF1E228BB180} = {9BC88EC4-0988-452A-8303-EDA848266AC9}
+		{C3038DA7-1C5A-48F4-B8B6-014E1CEC822E} = {9BC88EC4-0988-452A-8303-EDA848266AC9}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FC003B6-B867-404E-A942-65428DB6A065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FC003B6-B867-404E-A942-65428DB6A065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FC003B6-B867-404E-A942-65428DB6A065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FC003B6-B867-404E-A942-65428DB6A065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4E2DE6A-82CF-477B-B3F4-95C81CDA5607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E2DE6A-82CF-477B-B3F4-95C81CDA5607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E2DE6A-82CF-477B-B3F4-95C81CDA5607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E2DE6A-82CF-477B-B3F4-95C81CDA5607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8A74755-EBE2-4102-9E82-EF1E228BB180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8A74755-EBE2-4102-9E82-EF1E228BB180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8A74755-EBE2-4102-9E82-EF1E228BB180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8A74755-EBE2-4102-9E82-EF1E228BB180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3038DA7-1C5A-48F4-B8B6-014E1CEC822E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3038DA7-1C5A-48F4-B8B6-014E1CEC822E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3038DA7-1C5A-48F4-B8B6-014E1CEC822E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3038DA7-1C5A-48F4-B8B6-014E1CEC822E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
