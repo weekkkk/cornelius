@@ -1,4 +1,4 @@
-import{d as m,r as h,a as f,c as v,o as c,b as i,e as o,w as _,v as r,p as b,f as g,_ as y}from"./main-d3da89b3.js";import"./index-13ba80cc.js";import"./index-8a48ce59.js";const x=async s=>{let n=`
+import{d as m,r as h,a as f,c as v,o as c,b as i,e as o,w as _,v as r,p as b,f as g,_ as y}from"./main-79c84668.js";import"./index-93fc3ef5.js";import"./index-071c5559.js";const x=async s=>{let n=`
     <h1>Номер: </h1>${s.phone}
     <br>
     <h1>Имя: </h1>${s.name||"-"}
