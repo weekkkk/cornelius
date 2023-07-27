@@ -1,7 +1,47 @@
 <script lang="ts" setup>
 import { TitleBlock } from '@/shared'
 import { ContactForm, SocialLinks } from '@/widgets'
+
+
+//Тут логика для 14 пункта 
+
+/**
+ * Проверяем, использует ли пользователь операционную систему Windows
+ */
+const isWindows = window.navigator.userAgent.includes('Windows');
+
+/**
+ * Проверяем, использует ли пользователь операционную систему Android
+ */
+const isAndroid = window.navigator.userAgent.includes('Android');
+
+const openPhoneApp = (phoneNumber: string) => {
+  if (isWindows) {
+    /**
+     * Открываем приложение для Windows
+     */
+    window.location.href = `tel:${phoneNumber}`;
+  } else if (isAndroid) {
+    /**
+     * Показываем приглашение для Android
+     */
+    if (confirm('Выберите способ совершения звонка:')) {
+      window.location.href = `tel:${phoneNumber}`;
+    } else {
+     /**
+      * Тут надо попробовать чат в Viber 
+      */
+    }
+  } else {
+    /**
+     * Для других платформ для телефона
+     */
+    window.location.href = `tel:${phoneNumber}`;
+  }
+};
 </script>
+
+
 
 <template>
   <!-- style="transform: none" -->
@@ -26,29 +66,30 @@ import { ContactForm, SocialLinks } from '@/widgets'
       <tr>
         <td>Центральный офис (тел/факс)</td>
         <td>
-          <p>+373 533 83481 (9:00-17:00)</p>
-          <p>+373 777 83485 (9:00-17:00)</p>
+          <a href="tel:+373 533 83481"  class="contackt_href"><p>+373 533 83481 (9:00-17:00)</p></a>
+          <a href="tel:+373  777 83485"  class="contackt_href"> <p>+373 777 83485 (9:00-17:00)</p></a>
         </td>
       </tr>
       <tr>
         <td>Производственно-техническая база с. Суклея</td>
-        <td>+373 777 66761 (8:00-17:00)</td>
+       <td> <a href="tel:+373 533 24599"  class="contackt_href">+373 533 24599  (8:00-17:00)</a></td>
       </tr>
       <tr>
         <td>ПТО, Маркетинг (Viber/WhatsApp)</td>
-        <td>+373 795 35511 (9:00-17:00)</td>
+        <a href="#" class="contackt_href" @click="openPhoneApp('+37379535511')"> <td>+373 795 35511</td></a>
+        <a href="#" class="contackt_href" @click="openPhoneApp('+37377766761')">  <td>+373 777 66761 (10:00-18:00)</td></a>
       </tr>
       <tr>
         <td>Директор (Viber)</td>
-        <td>+373 777 13084 (8:00-17:00)</td>
+        <a href="#" class="contackt_href" @click="openPhoneApp('+37377713084')"> <td>+373 777 13084 (8:00-17:00)</td></a>
       </tr>
       <tr>
         <td>Проектный отдел</td>
-        <td>+373 778 95589 (9:00-17:00)</td>
+        <a href="tel:+373 778 95589" class="contackt_href"><td>+373 778 95589 (9:00-17:00)</td></a>
       </tr>
       <tr>
         <td>Бухгалтерия</td>
-        <td>+373 533 53721 (9:00-17:00)</td>
+        <a href="tel:+373 533 53721" class="contackt_href"><td>+373 533 53721 (9:00-17:00)</td></a>
       </tr>
     </table>
     <div class="f contacts_page-contacts_table-social_links">
@@ -163,9 +204,21 @@ import { ContactForm, SocialLinks } from '@/widgets'
     }
   }
 }
+
+.contackt_href{
+  color: #000;
+  text-decoration: none;
+  border-bottom: none;
+}
+a{
+  border-bottom: none;
+}
 </style>
 
 <style lang="scss">
+a{
+  border-bottom: none;
+}
 #contacts.page_li {
   .title_block {
     @media (max-width: 800px) {
