@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "MqPvXk2rNsnB51tFW5zQggD56y7UokE8b4ByDObBZdMAPOALG5W4YLqJj69tgH4QfxSegcEdFbaKB6WOyqSSfw==",
+  "dgSpecHash": "iVv6x1pw0Yiewx14NcMR6ifZAGWbByA1g+glYVg945oboassRcjWo+j1e5gqzXUE6AGu0Y/1yBZrvehP3R7XpA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\RiderProjects\\cornelius\\Cornelius\\Cornelius.Providers\\Cornelius.Providers.csproj",
+  "projectFilePath": "E:\\education\\c#\\cornelius\\Cornelius\\Cornelius.Providers\\Cornelius.Providers.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\admin\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.15\\microsoft.netcore.app.ref.6.0.15.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.15\\microsoft.windowsdesktop.app.ref.6.0.15.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.15\\microsoft.aspnetcore.app.ref.6.0.15.nupkg.sha512"
+    "C:\\Users\\Home\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.20\\microsoft.netcore.app.ref.6.0.20.nupkg.sha512",
+    "C:\\Users\\Home\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.20\\microsoft.windowsdesktop.app.ref.6.0.20.nupkg.sha512",
+    "C:\\Users\\Home\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.20\\microsoft.aspnetcore.app.ref.6.0.20.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,0 +1,17 @@
+E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\bin\Debug\net7.0\Cornelius.Product.Providers.deps.json
+E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\bin\Debug\net7.0\Cornelius.Product.Providers.runtimeconfig.json
+E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\bin\Debug\net7.0\Cornelius.Product.Providers.dll
+E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\bin\Debug\net7.0\Cornelius.Product.Providers.pdb
+E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\bin\Debug\net7.0\Cornelius.Product.Models.dll
+E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\bin\Debug\net7.0\Cornelius.Product.Models.pdb
+E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\obj\Debug\net7.0\Cornelius.Product.Providers.csproj.AssemblyReference.cache
+E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\obj\Debug\net7.0\Cornelius.Product.Providers.GeneratedMSBuildEditorConfig.editorconfig
+E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\obj\Debug\net7.0\Cornelius.Product.Providers.AssemblyInfoInputs.cache
+E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\obj\Debug\net7.0\Cornelius.Product.Providers.AssemblyInfo.cs
+E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\obj\Debug\net7.0\Cornelius.Product.Providers.csproj.CoreCompileInputs.cache
+E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\obj\Debug\net7.0\Cornelius.Product.Providers.csproj.CopyComplete
+E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\obj\Debug\net7.0\Cornelius.Product.Providers.dll
+E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\obj\Debug\net7.0\refint\Cornelius.Product.Providers.dll
+E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\obj\Debug\net7.0\Cornelius.Product.Providers.pdb
+E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\obj\Debug\net7.0\Cornelius.Product.Providers.genruntimeconfig.cache
+E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\obj\Debug\net7.0\ref\Cornelius.Product.Providers.dll

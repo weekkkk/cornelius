@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\RiderProjects\\cornelius\\Cornelius\\Cornelius.API\\Cornelius.API.csproj": {}
+    "E:\\education\\c#\\cornelius\\Cornelius\\Cornelius.API\\Cornelius.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\RiderProjects\\cornelius\\Cornelius\\Cornelius.API\\Cornelius.API.csproj": {
+    "E:\\education\\c#\\cornelius\\Cornelius\\Cornelius.API\\Cornelius.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\RiderProjects\\cornelius\\Cornelius\\Cornelius.API\\Cornelius.API.csproj",
+        "projectUniqueName": "E:\\education\\c#\\cornelius\\Cornelius\\Cornelius.API\\Cornelius.API.csproj",
         "projectName": "Cornelius.API",
-        "projectPath": "C:\\Users\\admin\\RiderProjects\\cornelius\\Cornelius\\Cornelius.API\\Cornelius.API.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\RiderProjects\\cornelius\\Cornelius\\Cornelius.API\\obj\\",
+        "projectPath": "E:\\education\\c#\\cornelius\\Cornelius\\Cornelius.API\\Cornelius.API.csproj",
+        "packagesPath": "C:\\Users\\Home\\.nuget\\packages\\",
+        "outputPath": "E:\\education\\c#\\cornelius\\Cornelius\\Cornelius.API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Home\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,6 +44,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.3.0-preview1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }
