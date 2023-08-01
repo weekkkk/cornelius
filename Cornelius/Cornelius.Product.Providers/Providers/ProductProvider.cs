@@ -12,7 +12,7 @@ public class ProductProvider: IProductProvider
         _productContext = productContext;
     }
 
-    public async Task<Models.Product> GetProduct(Guid id, CancellationToken cancellationToken)
+    public async Task<Models.Product> GetByIdAsync(Guid id, CancellationToken cancellationToken)
     {
         var product = await _productContext.Products
             .Include(p => p.Images)
@@ -21,7 +21,7 @@ public class ProductProvider: IProductProvider
 
     }
 
-    public async Task<List<Models.Product>> GetAllProduct(CancellationToken cancellationToken)
+    public async Task<List<Models.Product>> GetAllAsync(CancellationToken cancellationToken)
     {
         return await _productContext.Products
             .Include(p => p.Images)
@@ -29,13 +29,13 @@ public class ProductProvider: IProductProvider
 
     }
 
-    public async Task AddProduct(Models.Product product, CancellationToken cancellationToken)
+    public async Task AddAsync(Models.Product product, CancellationToken cancellationToken)
     {
         _productContext.Add(product);
         await _productContext.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
     }
 
-    public async Task UpdateProduct(Models.Product product, CancellationToken cancellationToken)
+    public async Task UpdateAsync(Models.Product product, CancellationToken cancellationToken)
     {
         _productContext.Update(product);
         await _productContext.SaveChangesAsync(cancellationToken);

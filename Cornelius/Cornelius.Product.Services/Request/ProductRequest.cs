@@ -1,0 +1,9 @@
+﻿namespace Cornelius.Product.Services.Request;
+
+public class ProductRequest
+{
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public List<ImageRequest> Images { get; set; }
+}

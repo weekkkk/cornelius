@@ -2,8 +2,8 @@
 
 public interface IProductProvider
 {
-    Task<Models.Product> GetProduct(Guid id, CancellationToken cancellationToken);
-    Task<List<Models.Product>> GetAllProduct(CancellationToken cancellationToken);
-    Task AddProduct(Models.Product product, CancellationToken cancellationToken);
-    Task UpdateProduct(Models.Product product, CancellationToken cancellationToken);
+    Task<Models.Product> GetByIdAsync(Guid id, CancellationToken cancellationToken);
+    Task<List<Models.Product>> GetAllAsync(CancellationToken cancellationToken);
+    Task AddAsync(Models.Product product, CancellationToken cancellationToken);
+    Task UpdateAsync(Models.Product product, CancellationToken cancellationToken);
 }
