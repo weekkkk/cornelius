@@ -15,3 +15,5 @@ E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\obj\Debug\net7.0
 E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\obj\Debug\net7.0\Cornelius.Product.Providers.pdb
 E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\obj\Debug\net7.0\Cornelius.Product.Providers.genruntimeconfig.cache
 E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\obj\Debug\net7.0\ref\Cornelius.Product.Providers.dll
+E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\bin\Debug\net7.0\Cornelius.Product.Services.dll
+E:\education\c#\cornelius\Cornelius\Cornelius.Product.Providers\bin\Debug\net7.0\Cornelius.Product.Services.pdb
