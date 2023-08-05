@@ -94,11 +94,6 @@ const phoneError = computed(() => {
     > div {
       row-gap: 8px;
     }
-    > button {
-      padding-top: 8px;
-      padding-bottom: 8px;
-      width: 100%;
-    }
   }
 }
 </style>

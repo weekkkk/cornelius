@@ -2,7 +2,7 @@
 import { onMounted, type DefineComponent, onBeforeUnmount, ref, provide } from 'vue'
 import { PageList, PagesNavbar, type PageType } from '@/entities'
 import * as pageComponents from '@/pages'
-import { CorneliusLogo } from '@/app'
+import { CorneliusLogo, CrossIcon } from '@/app'
 import { ContactForm } from '../contact-form'
 import { SocialLinks } from '..'
 const pages: PageType<typeof pageComponents.MainPage>[] = [
@@ -55,7 +55,7 @@ provide('contactFormModalVisible', contactFormModalVisible)
       <PagesNavbar :pages="pages">
         <a style="text-decoration: none; color: inherit" href="tel:+373 777 83485">
           <h1 class="ff-OS">+373 777 83485</h1>
-       </a> 
+        </a>
         <SocialLinks class="w-100" />
       </PagesNavbar>
     </header>
@@ -70,7 +70,13 @@ provide('contactFormModalVisible', contactFormModalVisible)
         @click="contactFormModalVisible = false"
         class="landing_layout-modal landing_layout-modal-contact_form f ai-c jc-c"
       >
-        <div @click.stop class="p-3 bg-default">
+        <div @click.stop class="px-5 py-4 bg-default landing_layout-modal-contact_form-content">
+          <img
+            :src="CrossIcon"
+            width="24"
+            class="landing_layout-modal-contact_form-content-cross"
+            @click="contactFormModalVisible = false"
+          />
           <ContactForm @success="contactFormModalVisible = false" />
         </div>
       </div>
@@ -126,11 +132,21 @@ provide('contactFormModalVisible', contactFormModalVisible)
 <style lang="scss">
 .landing_layout {
   &-modal {
-    // .contact_form {
-    //   button {
-    //     width: auto !important;
-    //   }
-    // }
+    &-contact_form {
+      &-content {
+        position: relative;
+        &-cross {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          filter: brightness(0);
+          cursor: pointer;
+        }
+      }
+      //   button {
+      //     width: auto !important;
+      //   }
+    }
   }
 }
 </style>

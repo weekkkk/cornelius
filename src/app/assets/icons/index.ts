@@ -1,6 +1,7 @@
 import BurgerIcon from './burgerIcon.svg'
 import ArrowIcon from './arrowIcon.svg'
-export { BurgerIcon, ArrowIcon }
+import CrossIcon from './crossIcon.svg'
+export { BurgerIcon, ArrowIcon, CrossIcon }
 
 import TelegramIcon from './social/telegramIcon.svg'
 import ViberIcon from './social/viberIcon.svg'

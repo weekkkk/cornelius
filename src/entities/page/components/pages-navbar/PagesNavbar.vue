@@ -2,7 +2,7 @@
 import { computed, inject, onMounted, ref, type Ref } from 'vue'
 import type { PageType } from '../..'
 import { useRoute, useRouter } from 'vue-router'
-import { BurgerIcon } from '@/app'
+import { BurgerIcon, CrossIcon } from '@/app'
 
 const props = defineProps<{
   pages: PageType<T>[]
@@ -44,16 +44,25 @@ const mobileMenuVisible = ref(false)
       @click="goToHash(`#${page.id}`)"
     >
       {{ page.title }}
-   </a> 
+    </a>
 
     <p class="pages_navbar-link">
-      <a href="tel:+373 777 83485"> +373 777 83485</a> 
+      <a href="tel:+373 777 83485"> +373 777 83485</a>
     </p>
   </div>
   <img
+    v-if="!mobileMenuVisible"
     class="pages_navbar-burger"
     @click="mobileMenuVisible = !mobileMenuVisible"
     :src="BurgerIcon"
+    height="20"
+  />
+
+  <img
+    v-else
+    class="pages_navbar-burger"
+    @click="mobileMenuVisible = !mobileMenuVisible"
+    :src="CrossIcon"
     height="20"
   />
   <Teleport to="body">
@@ -88,7 +97,7 @@ const mobileMenuVisible = ref(false)
         :to="{ hash: `#${page.id}` }"
         @click="goToHash(`#${page.id}`)"
       >
-     </a> 
+      </a>
     </div>
   </Teleport>
 </template>
@@ -144,6 +153,7 @@ const mobileMenuVisible = ref(false)
   }
   &-burger {
     display: none;
+    width: 24px;
     cursor: pointer;
     transition: 0.5s ease;
     &:hover {
