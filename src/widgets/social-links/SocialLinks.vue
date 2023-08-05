@@ -4,7 +4,7 @@ import { TelegramIcon, WhatsAppIcon, ViberIcon } from '@/app'
 
 <template>
   <div class="f g-4 jc-c social_links fw-bold c-second-100">
-    <a target="_blank" class="f fd-col ai-c ta-c" href="https://t.me/37377783485">
+    <a target="_blank" class="f fd-col ai-c ta-c" href="https://t.me/+37377783485">
       <img :src="TelegramIcon" width="100" />
       <!-- <p>Telegram</p> -->
    </a> 

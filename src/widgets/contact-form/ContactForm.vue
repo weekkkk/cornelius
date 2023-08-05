@@ -73,7 +73,7 @@ const phoneError = computed(() => {
     border: none;
     border: 1px solid var(--n-second-50);
     font-family: inherit;
-    font-size: inherit;
+    font-size: 20px;
     padding: 18px 18px;
     text-align: center;
     &:disabled {

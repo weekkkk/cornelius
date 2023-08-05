@@ -116,11 +116,22 @@ import { ContactForm, SocialLinks } from '@/widgets'
     </tr>
   </table> -->
 
-  <div class="contacts_page-contact_form-wrap f g-5 ai-fe">
-    <ContactForm class="w-100" />
-    
-    <div class="f contacts_page-contacts_table-social_links">
-      <SocialLinks class="fd-col" />
+  <div class="contacts_page-contact_form-wrap f fd-col rg-4">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4589.815385174891!2d29.620437967416805!3d46.841316639079636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c9035ef240423b%3A0xdfb90db3821df9d5!2sSRL%20%22Cornelius%22!5e0!3m2!1sru!2sru!4v1591569728532!5m2!1sru!2sru"
+      height="450"
+      frameborder="0"
+      style="border: 0"
+      allowfullscreen
+      aria-hidden="false"
+      tabindex="0"
+    />
+    <div class="f g-5 ai-fe">
+      <ContactForm class="w-100" />
+
+      <div class="f contacts_page-contacts_table-social_links">
+        <SocialLinks class="fd-col" />
+      </div>
     </div>
   </div>
 </template>
@@ -131,7 +142,7 @@ import { ContactForm, SocialLinks } from '@/widgets'
     &-wrap {
       grid-column-start: 6;
       grid-column-end: end;
-      grid-row-start: 4;
+      grid-row-start: 3;
       grid-row-end: end;
       padding-bottom: var(--page-px);
       padding-right: var(--page-px);
@@ -149,6 +160,10 @@ import { ContactForm, SocialLinks } from '@/widgets'
     grid-row-start: 3;
     grid-row-end: 7;
     font-size: 20px;
+
+    @media (max-width: 1600px) {
+      font-size: 14px;
+    }
 
     vertical-align: top;
 
