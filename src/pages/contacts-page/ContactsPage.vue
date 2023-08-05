@@ -173,10 +173,15 @@ import { ContactForm, SocialLinks } from '@/widgets'
     grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 7;
-    font-size: 20px;
-
+    font-size: 18px !important;
+    p {
+      font-size: 18px !important;
+    }
     @media (max-width: 1600px) {
-      font-size: 14px;
+      font-size: 14px !important;
+      p {
+        font-size: 14px !important;
+      }
     }
 
     vertical-align: top;
@@ -194,7 +199,10 @@ import { ContactForm, SocialLinks } from '@/widgets'
       grid-row-end: 4;
       grid-column-start: 2;
       grid-column-end: 5;
-      font-size: 8px;
+      font-size: 8px !important;
+      p {
+        font-size: 8px !important;
+      }
       --n-fs-p: 8px !important;
       td {
         padding: 8px 0 !important;
