@@ -86,7 +86,7 @@ const contactFormModalVisible = inject('contactFormModalVisible')
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     @media (max-width: 800px) {
-      grid-template-rows: 16px 1fr fit-content(200px) fit-content(600px) 16px;
+      grid-template-rows: 16px 300px fit-content(300px) fit-content(300px) fit-content(600px) 16px;
     }
   }
   @keyframes slide {

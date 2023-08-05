@@ -86,6 +86,7 @@ onBeforeUnmount(() => {
   overflow: hidden;
   height: 100vh;
   position: relative;
+  
   &-active {
     transform: translateX(0);
     z-index: 1;
@@ -151,4 +152,10 @@ onBeforeUnmount(() => {
     }
   }
 }
+</style>
+
+<style lang="scss">
+#equipment.page_li .page_li-content{
+    grid-template-rows: 200px fit-content(100px) 200px 200px 1fr;
+  }
 </style>

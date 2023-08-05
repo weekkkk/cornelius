@@ -77,7 +77,9 @@ provide('contactFormModalVisible', contactFormModalVisible)
             class="landing_layout-modal-contact_form-content-cross"
             @click="contactFormModalVisible = false"
           />
-          <ContactForm @success="contactFormModalVisible = false" />
+          <ContactForm
+            @success="contactFormModalVisible = false"
+          />
         </div>
       </div>
     </Transition>
@@ -143,9 +145,6 @@ provide('contactFormModalVisible', contactFormModalVisible)
           cursor: pointer;
         }
       }
-      //   button {
-      //     width: auto !important;
-      //   }
     }
   }
 }

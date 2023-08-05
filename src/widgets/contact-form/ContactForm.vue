@@ -76,6 +76,8 @@ const phoneError = computed(() => {
     font-size: 20px;
     padding: 18px 18px;
     text-align: center;
+    min-width: 0;
+    width: 100%;
     &:disabled {
       opacity: 0.75;
       background-color: var(--n-second-0);
