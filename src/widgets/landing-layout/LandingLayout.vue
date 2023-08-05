@@ -126,11 +126,11 @@ provide('contactFormModalVisible', contactFormModalVisible)
 <style lang="scss">
 .landing_layout {
   &-modal {
-    .contact_form {
-      button {
-        width: auto !important;
-      }
-    }
+    // .contact_form {
+    //   button {
+    //     width: auto !important;
+    //   }
+    // }
   }
 }
 </style>

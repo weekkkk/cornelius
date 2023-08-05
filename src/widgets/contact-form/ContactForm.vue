@@ -36,8 +36,8 @@ const phoneError = computed(() => {
 
 <template>
   <div class="contact_form f fd-col ai-fs rg-4">
-    <div class="f fd-col rg-3 w-100">
-      <div class="f fd-col rg-2">
+    <div class="f fd-col rg-4 w-100">
+      <div class="f fd-col">
         <input v-model="contact.phone" type="text" placeholder="Введите ваш телефон" />
       </div>
       <input
@@ -54,7 +54,7 @@ const phoneError = computed(() => {
       />
     </div>
 
-    <button @click="sendMail" class="px-5" :disabled="!!phoneError">
+    <button @click="sendMail" class="mt-1 px-5" :disabled="!!phoneError">
       <span v-if="!isLoading"> Отправить </span>
 
       <div class="button-loader" v-else>
@@ -71,17 +71,19 @@ const phoneError = computed(() => {
   input {
     outline: none;
     border: none;
-    border-bottom: 1px solid var(--n-second-50);
+    border: 1px solid var(--n-second-50);
     font-family: inherit;
     font-size: inherit;
-    padding: 12px 8px;
+    padding: 18px 18px;
+    text-align: center;
     &:disabled {
       opacity: 0.75;
       background-color: var(--n-second-0);
     }
   }
   > button {
-    width: calc(100% / 3);
+    width: 100%;
+    // width: calc(100% / 3);
     &:disabled {
       opacity: 0.75;
     }

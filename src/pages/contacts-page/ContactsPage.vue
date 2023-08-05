@@ -27,59 +27,68 @@ import { ContactForm, SocialLinks } from '@/widgets'
         <td>Центральный офис (тел/факс)</td>
         <td>
           <p>
-            <a href="tel:+373 533 83481"> +373 533 83481</a> 
+            <a href="tel:+373 533 83481"> +373 533 83481</a>
             (9:00-17:00)
           </p>
           <p>
-            <a href="tel:+373 777 83485"> +373 777 83485</a> 
+            <a href="tel:+373 777 83485"> +373 777 83485</a>
             (9:00-17:00)
           </p>
         </td>
       </tr>
       <tr>
-        <td>Производственно-техническая база с. Суклея</td>
+        <td>Производственно-техническая база</td>
         <td>
-          <a href="tel:+373 533 24599"> +373 533 24599</a> 
+          <a href="tel:+373 533 24599"> +373 533 24599</a>
           (8:00-17:00)
         </td>
       </tr>
       <tr>
         <td>ПТО, Маркетинг (Viber/WhatsApp)</td>
         <td>
-          <p>
-            <a href="tel:+373 795 35511"> +373 795 35511</a> 
-          </p>
-          <p>
-            <a href="tel:+373 777 66761"> +373 777 66761</a> 
-            (10:00-18:00)
-          </p>
+          <div class="contacts_page-contacts_table-phones-wrap">
+            <div class="contacts_page-contacts_table-phones f fd-col">
+              <p>
+                <a href="tel:+373 795 35511"> +373 795 35511</a>
+              </p>
+              <p>
+                <a href="tel:+373 777 66761"> +373 777 66761</a>
+                (10:00-18:00)
+              </p>
+            </div>
+          </div>
         </td>
       </tr>
       <tr>
         <td>Директор (Viber)</td>
         <td>
-          <a href="tel:+373 777 13084"> +373 777 13084</a> 
+          <a href="tel:+373 777 13084"> +373 777 13084</a>
           (8:00-17:00)
         </td>
       </tr>
       <tr>
         <td>Проектный отдел</td>
         <td>
-          <a href="tel:+373 778 95589"> +373 778 95589</a> 
+          <a href="tel:+373 778 95589"> +373 778 95589</a>
           (9:00-17:00)
         </td>
       </tr>
       <tr>
         <td>Бухгалтерия</td>
         <td>
-          <a href="tel:+373 533 53721"> +373 533 53721</a> 
+          <a href="tel:+373 533 53721"> +373 533 53721</a>
           (9:00-17:00)
         </td>
       </tr>
+      <tr>
+        <td>Центральный офис</td>
+        <td>Молдова, г.Тирасполь, ул. Карла-Либкнехта 385</td>
+      </tr>
+      <tr>
+        <td>Производственно-техническая база</td>
+        <td>с. Суклея, ул. Котовского 81</td>
+      </tr>
     </table>
-    <div class="f contacts_page-contacts_table-social_links">
-      <SocialLinks />
-    </div>
   </div>
 
   <!-- style="transform: none" -->
@@ -96,20 +105,23 @@ import { ContactForm, SocialLinks } from '@/widgets'
     Адреса
   </TitleBlock> -->
 
-  <table class="contacts_page-addresses_table">
+  <!-- <table class="contacts_page-addresses_table">
     <tr>
       <td>Центральный офис</td>
       <td>Молдова, г.Тирасполь, ул. Карла-Либкнехта 385</td>
-      <!-- каб. 201, 202, 204 -->
     </tr>
     <tr>
       <td>Производственно-техническая база</td>
       <td>с. Суклея, ул. Котовского 81</td>
     </tr>
-  </table>
+  </table> -->
 
-  <div class="contacts_page-contact_form-wrap f ai-fe">
+  <div class="contacts_page-contact_form-wrap f g-5 ai-fe">
     <ContactForm class="w-100" />
+    
+    <div class="f contacts_page-contacts_table-social_links">
+      <SocialLinks class="fd-col" />
+    </div>
   </div>
 </template>
 
@@ -136,9 +148,18 @@ import { ContactForm, SocialLinks } from '@/widgets'
     grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 7;
-    font-size: 16px;
+    font-size: 20px;
 
     vertical-align: top;
+
+    &-phones {
+      width: fit-content;
+      text-align: left;
+      &-wrap {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
     @media (max-width: 800px) {
       grid-row-start: 3;
       grid-row-end: 4;
