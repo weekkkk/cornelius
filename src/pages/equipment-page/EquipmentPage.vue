@@ -19,7 +19,14 @@ const contactFormModalVisible = inject('contactFormModalVisible')
     :src="EquipmentImage1"
   />
 
-  <ImageBlock :x-start="7" x-end="end" :y-start="3" y-end="end" :src="EquipmentImage2" is-tablet-hide />
+  <ImageBlock
+    :x-start="7"
+    x-end="end"
+    :y-start="3"
+    y-end="end"
+    :src="EquipmentImage2"
+    is-tablet-hide
+  />
 
   <TitleBlock
     :x-start="2"
@@ -31,7 +38,7 @@ const contactFormModalVisible = inject('contactFormModalVisible')
     :mobile-y-start="2"
     :mobile-y-end="3"
   >
-    Оборудование
+    Поставки
   </TitleBlock>
   <TextBlock
     :x-start="3"
@@ -44,12 +51,8 @@ const contactFormModalVisible = inject('contactFormModalVisible')
     :mobile-y-end="4"
   >
     <p>
-      ООО "Корнелиус" поставляет промышленное оборудование в сфере газификации и систем
-      теплоснабжения.
-    </p>
-    <p>
-      Счётчики, электронные корректоры объёма газа, горелки, котлы, насосы по выгодным (лучшим)
-      ценам с доставкой по Приднестровью, Молдове и Украине.
+      ООО "Корнелиус" поставляет промышленное оборудование и материалы в сфере газификации и систем
+      теплоснабжения, водоснабжения, канализации, вентиляции
     </p>
   </TextBlock>
 

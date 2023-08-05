@@ -44,9 +44,11 @@ const mobileMenuVisible = ref(false)
       @click="goToHash(`#${page.id}`)"
     >
       {{ page.title }}
-    </a>
+   </a> 
 
-    <p class="pages_navbar-link">+373 777 83485</p>
+    <p class="pages_navbar-link">
+      <a href="tel:+373 777 83485"> +373 777 83485</a> 
+    </p>
   </div>
   <img
     class="pages_navbar-burger"
@@ -86,7 +88,7 @@ const mobileMenuVisible = ref(false)
         :to="{ hash: `#${page.id}` }"
         @click="goToHash(`#${page.id}`)"
       >
-      </a>
+     </a> 
     </div>
   </Teleport>
 </template>

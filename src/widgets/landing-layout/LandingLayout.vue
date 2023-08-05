@@ -13,7 +13,7 @@ const pages: PageType<typeof pageComponents.MainPage>[] = [
   },
   {
     id: 'equipment',
-    title: 'Оборудование',
+    title: 'Поставки',
     component: pageComponents.EquipmentPage
   },
   {
@@ -55,7 +55,7 @@ provide('contactFormModalVisible', contactFormModalVisible)
       <PagesNavbar :pages="pages">
         <a style="text-decoration: none; color: inherit" href="tel:+373 777 83485">
           <h1 class="ff-OS">+373 777 83485</h1>
-        </a>
+       </a> 
         <SocialLinks class="w-100" />
       </PagesNavbar>
     </header>

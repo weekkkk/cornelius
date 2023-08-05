@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Accreditation_0709_19, Accreditation_0893_21, Accreditation_0687_19, License, AccreditationsImage1 } from '@/app'
+import { Accreditation_0709_19, Accreditation_0893_21, Accreditation_0687_19, Accreditation_0985_23, License, AccreditationsImage1 } from '@/app'
 import { ButtonBlock, ImageBlock, TextBlock, TitleBlock } from '@/shared'
 import { inject } from 'vue'
 
@@ -40,6 +40,7 @@ const contactFormModalVisible = inject('contactFormModalVisible')
       <a :href="Accreditation_0709_19" target="_blank">Аккредитация 0709-19</a>
       <a :href="Accreditation_0893_21" target="_blank">Аккредитация 0893-21</a>
       <a :href="Accreditation_0687_19" target="_blank">Аккредитация 0687-19</a>
+      <a :href="Accreditation_0985_23" target="_blank">Аккредитация 0985-23</a>
       <a :href="License" target="_blank">Лицензия ООО Корнелиус</a>
     </div>
   </TextBlock>
