@@ -34,10 +34,10 @@ public class ProductController: ApiBaseController
         var listProduct = await _productService.GetAllAsync(new CancellationToken());
         return listProduct;
     }
-    [HttpGet("GetProduct")]
-    public async Task<Models.Product> GetById(Guid id)
-    {
-        var product = await _productService.GetByIdAsync(id, new CancellationToken());
-        return product;
-    }
+    // [HttpGet("GetProduct")]
+    // public async Task<Models.Product> GetById(Guid id)
+    // {
+    //     var product = await _productService.GetByIdAsync(id, new CancellationToken());
+    //     return product;
+    // }
 }
