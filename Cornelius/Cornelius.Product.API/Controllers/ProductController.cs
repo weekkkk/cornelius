@@ -21,7 +21,7 @@ public class ProductController: ApiBaseController
         await _productService.CreateAsync(product, new CancellationToken());
         return Ok();
     }
-    [HttpPost("UpdateProduct")]
+    [HttpPut(Name = "UpdateProduct")]
     public async Task<IActionResult> UpdateAsync(ProductRequest product)
     {
         ArgumentNullException.ThrowIfNull(product);
@@ -34,10 +34,11 @@ public class ProductController: ApiBaseController
         var listProduct = await _productService.GetAllAsync(new CancellationToken());
         return listProduct;
     }
-    // [HttpGet("GetProduct")]
-    // public async Task<Models.Product> GetById(Guid id)
-    // {
-    //     var product = await _productService.GetByIdAsync(id, new CancellationToken());
-    //     return product;
-    // }
+    [HttpGet("{id}")]
+    public async Task<Models.Product> GetById(Guid id)
+    {
+        var testID = new Guid("0f77acec-a90b-4f9b-8231-7f9518035475");
+        var product = await _productService.GetByIdAsync(id, new CancellationToken());
+        return product;
+    }
 }
