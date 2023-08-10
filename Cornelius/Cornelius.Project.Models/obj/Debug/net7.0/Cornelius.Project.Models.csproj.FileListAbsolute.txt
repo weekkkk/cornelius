@@ -1,0 +1,12 @@
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Models\bin\Debug\net7.0\Cornelius.Project.Models.deps.json
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Models\bin\Debug\net7.0\Cornelius.Project.Models.dll
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Models\bin\Debug\net7.0\Cornelius.Project.Models.pdb
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Models\obj\Debug\net7.0\Cornelius.Project.Models.csproj.AssemblyReference.cache
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Models\obj\Debug\net7.0\Cornelius.Project.Models.GeneratedMSBuildEditorConfig.editorconfig
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Models\obj\Debug\net7.0\Cornelius.Project.Models.AssemblyInfoInputs.cache
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Models\obj\Debug\net7.0\Cornelius.Project.Models.AssemblyInfo.cs
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Models\obj\Debug\net7.0\Cornelius.Project.Models.csproj.CoreCompileInputs.cache
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Models\obj\Debug\net7.0\Cornelius.Project.Models.dll
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Models\obj\Debug\net7.0\refint\Cornelius.Project.Models.dll
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Models\obj\Debug\net7.0\Cornelius.Project.Models.pdb
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Models\obj\Debug\net7.0\ref\Cornelius.Project.Models.dll

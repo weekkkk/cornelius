@@ -37,7 +37,6 @@ public class ProductController: ApiBaseController
     [HttpGet("{id}")]
     public async Task<Models.Product> GetById(Guid id)
     {
-        var testID = new Guid("0f77acec-a90b-4f9b-8231-7f9518035475");
         var product = await _productService.GetByIdAsync(id, new CancellationToken());
         return product;
     }

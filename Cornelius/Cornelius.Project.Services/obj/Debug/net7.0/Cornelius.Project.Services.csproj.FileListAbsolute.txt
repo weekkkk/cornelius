@@ -1,0 +1,15 @@
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Services\bin\Debug\net7.0\Cornelius.Project.Services.deps.json
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Services\bin\Debug\net7.0\Cornelius.Project.Services.dll
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Services\bin\Debug\net7.0\Cornelius.Project.Services.pdb
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Services\bin\Debug\net7.0\Cornelius.Project.Models.dll
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Services\bin\Debug\net7.0\Cornelius.Project.Models.pdb
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Services\obj\Debug\net7.0\Cornelius.Project.Services.csproj.AssemblyReference.cache
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Services\obj\Debug\net7.0\Cornelius.Project.Services.GeneratedMSBuildEditorConfig.editorconfig
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Services\obj\Debug\net7.0\Cornelius.Project.Services.AssemblyInfoInputs.cache
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Services\obj\Debug\net7.0\Cornelius.Project.Services.AssemblyInfo.cs
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Services\obj\Debug\net7.0\Cornelius.Project.Services.csproj.CoreCompileInputs.cache
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Services\obj\Debug\net7.0\Cornelius.Project.Services.csproj.CopyComplete
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Services\obj\Debug\net7.0\Cornelius.Project.Services.dll
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Services\obj\Debug\net7.0\refint\Cornelius.Project.Services.dll
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Services\obj\Debug\net7.0\Cornelius.Project.Services.pdb
+E:\education\c#\cornelius\Cornelius\Cornelius.Project.Services\obj\Debug\net7.0\ref\Cornelius.Project.Services.dll

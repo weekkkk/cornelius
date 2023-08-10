@@ -4,6 +4,6 @@ namespace Cornelius.EntryPoint.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class WeatherForecastController : ControllerBase
+public class EntryPointController : ControllerBase
 {
 }
