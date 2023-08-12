@@ -8,7 +8,8 @@
   }
 
   body {
-    font-family: 'OpenSans';
+    // font-family: 'OpenSans';
+    font-family: 'Montserrat';
     line-height: var(--n-lh-regular);
     color: var(--n-base);
     background-color: var(--n-default);
@@ -22,7 +23,10 @@
     display: grid;
     grid-template-columns: var(--corn-page-px) repeat(7, 1fr) var(--corn-page-px);
     grid-template-rows: var(--corn-page-py) repeat(7, 1fr) var(--corn-page-py);
-    min-height: 100vh;
+    height: 100vh;
+    // @media (max-width: 1400px) {
+    //   height: auto;
+    // }
   }
 
   .text_block {
@@ -34,19 +38,25 @@
     > p {
       z-index: 2;
     }
+    &-1 {
+      background-color: var(--n-second-0);
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.44444444rem;
+      padding: 2rem 3rem;
+    }
   }
   button {
+    font-family: 'OpenSans';
     background-color: var(--n-brand);
     border: none;
     color: var(--n-default);
     padding: 1rem;
-    font-size: .88888889rem;
+    font-size: 0.88888889rem;
     line-height: var(--n-lh-no);
-    font-family: inherit;
-    width: calc(100% / 3);
     min-height: fit-content;
     font-weight: var(--n-fw-bold);
-    &:not(:disabled){ 
+    &:not(:disabled) {
       cursor: pointer;
     }
   }

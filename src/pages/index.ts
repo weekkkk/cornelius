@@ -1,6 +1,6 @@
 export * from './accreditations-page'
 export * from './main-page'
-export * from './equipment-page'
+export * from './supplies-page'
 export * from './design-page'
 export * from './news-page'
 export * from './contacts-page'
