@@ -14,17 +14,17 @@
     color: var(--n-base);
     background-color: var(--n-default);
     overflow: hidden;
+    @media (max-width: 1024px) {
+      overflow: auto;
+    }
   }
 
   --corn-page-px: 6.25vw;
   --corn-page-py: 6.25vw;
 
   #app {
-    display: grid;
-    grid-template-columns: var(--corn-page-px) repeat(7, 1fr) var(--corn-page-px);
-    grid-template-rows: var(--corn-page-py) repeat(7, 1fr) var(--corn-page-py);
-    height: 100vh;
-    // @media (max-width: 1400px) {
+    // height: 100vh;
+    // @media (max-width: 1024px) {
     //   height: auto;
     // }
   }
@@ -45,6 +45,9 @@
       row-gap: 0.44444444rem;
       padding: 2rem 3rem;
     }
+    @media (max-width: 960px) {
+      padding: 2rem 3rem;
+    }
   }
   button {
     font-family: 'OpenSans';
@@ -59,6 +62,11 @@
     &:not(:disabled) {
       cursor: pointer;
     }
+  }
+  .mobile_title {
+    margin-bottom: -1.4rem;
+    z-index: 2;
+    font-family: 'OpenSans';
   }
   h1 {
     line-height: var(--n-lh-no);

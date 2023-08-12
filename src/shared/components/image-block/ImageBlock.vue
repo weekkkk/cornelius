@@ -1,11 +1,16 @@
 <script lang="ts" setup>
 import type { GridPositionType } from '../types'
 
-const props = defineProps<GridPositionType & { src: string }>()
+const props = withDefaults(defineProps<GridPositionType & { src: string; aspectRatio?: string }>(), {
+  aspectRatio: '16 / 9'
+})
 </script>
 
 <template>
-  <figure class="image_block">
+  <figure
+    class="image_block"
+    :class="{ 'image_block-mobile_hide': isMobileHide, 'image_block-mobile_show': isMobileShow }"
+  >
     <img :src="src" />
   </figure>
 </template>
@@ -21,6 +26,17 @@ const props = defineProps<GridPositionType & { src: string }>()
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  @media (min-width: 961px) {
+    &.image_block-mobile_show {
+      display: none;
+    }
+  }
+  @media (max-width: 960px) {
+    &.image_block-mobile_hide {
+      display: none;
+    }
+    aspect-ratio: v-bind(aspectRatio);
   }
 }
 </style>

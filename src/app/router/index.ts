@@ -1,13 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { nextTick } from 'vue'
-import * as pages from '@/pages'
+import { LandingLayout } from '@/widgets'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      component: pages.MainPage
+      component: LandingLayout
     }
   ],
   scrollBehavior: (to, from, savedPosition) => {

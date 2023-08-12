@@ -5,7 +5,7 @@ const props = defineProps<GridPositionType>()
 </script>
 
 <template>
-  <div class="grid_block f fd-col">
+  <div class="grid_block f fd-col" :class="{ 'grid_block-mobile_hide': isMobileHide, 'grid_block-mobile_show': isMobileShow }">
     <slot />
   </div>
 </template>
@@ -22,6 +22,15 @@ const props = defineProps<GridPositionType>()
     height: 100%;
     object-fit: cover;
   }
-  // background-color: rgba(0, 0, 0, 0.5);
+  @media (min-width: 961px) {
+    &.grid_block-mobile_show {
+      display: none;
+    }
+  }
+  @media (max-width: 960px) {
+    &.grid_block-mobile_hide {
+      display: none;
+    }
+  }
 }
 </style>
