@@ -26,6 +26,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cornelius.Project.Services"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cornelius.Project.API", "Cornelius.Project.API\Cornelius.Project.API.csproj", "{C5CC286B-1330-44BD-985D-B81B82BA3AAD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cornelius.Authorization.Models", "Cornelius.Authorization.Models\Cornelius.Authorization.Models.csproj", "{7E24E26A-770F-4293-A9DD-8BBF89E705CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cornelius.Authorization.Services", "Cornelius.Authorization.Services\Cornelius.Authorization.Services.csproj", "{424EAD9F-DF9A-4DC1-BEA1-49230B380DC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cornelius.Authorization.Providers", "Cornelius.Authorization.Providers\Cornelius.Authorization.Providers.csproj", "{CA6831A8-A736-4161-8015-3BA280623DA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cornelius.Authorization.API", "Cornelius.Authorization.API\Cornelius.Authorization.API.csproj", "{EA7733CE-8AB6-419E-B768-99E6E3956843}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +51,10 @@ Global
 		{2D818A7F-7073-4D38-AA2D-846B9D967648} = {CD46D81B-F3FF-4836-83AB-8D0333433497}
 		{4D760456-A3DE-479D-9270-815F8F0624CA} = {CD46D81B-F3FF-4836-83AB-8D0333433497}
 		{C5CC286B-1330-44BD-985D-B81B82BA3AAD} = {CD46D81B-F3FF-4836-83AB-8D0333433497}
+		{7E24E26A-770F-4293-A9DD-8BBF89E705CF} = {1D4C64DF-714A-40C8-8F61-439A121151DC}
+		{424EAD9F-DF9A-4DC1-BEA1-49230B380DC4} = {1D4C64DF-714A-40C8-8F61-439A121151DC}
+		{CA6831A8-A736-4161-8015-3BA280623DA6} = {1D4C64DF-714A-40C8-8F61-439A121151DC}
+		{EA7733CE-8AB6-419E-B768-99E6E3956843} = {1D4C64DF-714A-40C8-8F61-439A121151DC}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C0903C1B-7EA4-4938-9C49-EFC20AF7DDF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -81,5 +93,21 @@ Global
 		{C5CC286B-1330-44BD-985D-B81B82BA3AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5CC286B-1330-44BD-985D-B81B82BA3AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5CC286B-1330-44BD-985D-B81B82BA3AAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E24E26A-770F-4293-A9DD-8BBF89E705CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E24E26A-770F-4293-A9DD-8BBF89E705CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E24E26A-770F-4293-A9DD-8BBF89E705CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E24E26A-770F-4293-A9DD-8BBF89E705CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{424EAD9F-DF9A-4DC1-BEA1-49230B380DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{424EAD9F-DF9A-4DC1-BEA1-49230B380DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{424EAD9F-DF9A-4DC1-BEA1-49230B380DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{424EAD9F-DF9A-4DC1-BEA1-49230B380DC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA6831A8-A736-4161-8015-3BA280623DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA6831A8-A736-4161-8015-3BA280623DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA6831A8-A736-4161-8015-3BA280623DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA6831A8-A736-4161-8015-3BA280623DA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA7733CE-8AB6-419E-B768-99E6E3956843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA7733CE-8AB6-419E-B768-99E6E3956843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA7733CE-8AB6-419E-B768-99E6E3956843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA7733CE-8AB6-419E-B768-99E6E3956843}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
