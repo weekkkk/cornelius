@@ -10,3 +10,14 @@ E:\education\c#\cornelius\Cornelius\Cornelius.Product.Models\obj\Debug\net7.0\Co
 E:\education\c#\cornelius\Cornelius\Cornelius.Product.Models\obj\Debug\net7.0\refint\Cornelius.Product.Models.dll
 E:\education\c#\cornelius\Cornelius\Cornelius.Product.Models\obj\Debug\net7.0\Cornelius.Product.Models.pdb
 E:\education\c#\cornelius\Cornelius\Cornelius.Product.Models\obj\Debug\net7.0\ref\Cornelius.Product.Models.dll
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Product.Models\bin\Debug\net7.0\Cornelius.Product.Models.deps.json
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Product.Models\bin\Debug\net7.0\Cornelius.Product.Models.dll
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Product.Models\bin\Debug\net7.0\Cornelius.Product.Models.pdb
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Product.Models\obj\Debug\net7.0\Cornelius.Product.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Product.Models\obj\Debug\net7.0\Cornelius.Product.Models.AssemblyInfoInputs.cache
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Product.Models\obj\Debug\net7.0\Cornelius.Product.Models.AssemblyInfo.cs
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Product.Models\obj\Debug\net7.0\Cornelius.Product.Models.csproj.CoreCompileInputs.cache
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Product.Models\obj\Debug\net7.0\Cornelius.Product.Models.dll
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Product.Models\obj\Debug\net7.0\refint\Cornelius.Product.Models.dll
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Product.Models\obj\Debug\net7.0\Cornelius.Product.Models.pdb
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Product.Models\obj\Debug\net7.0\ref\Cornelius.Product.Models.dll

@@ -1,0 +1,15 @@
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Services\bin\Debug\net7.0\Cornelius.Authorization.Services.deps.json
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Services\bin\Debug\net7.0\Cornelius.Authorization.Services.dll
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Services\bin\Debug\net7.0\Cornelius.Authorization.Services.pdb
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Services\bin\Debug\net7.0\Cornelius.Authorization.Models.dll
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Services\bin\Debug\net7.0\Cornelius.Authorization.Models.pdb
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Services\obj\Debug\net7.0\Cornelius.Authorization.Services.csproj.AssemblyReference.cache
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Services\obj\Debug\net7.0\Cornelius.Authorization.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Services\obj\Debug\net7.0\Cornelius.Authorization.Services.AssemblyInfoInputs.cache
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Services\obj\Debug\net7.0\Cornelius.Authorization.Services.AssemblyInfo.cs
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Services\obj\Debug\net7.0\Cornelius.Authorization.Services.csproj.CoreCompileInputs.cache
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Services\obj\Debug\net7.0\Cornelius.Authorization.Services.csproj.CopyComplete
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Services\obj\Debug\net7.0\Cornelius.Authorization.Services.dll
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Services\obj\Debug\net7.0\refint\Cornelius.Authorization.Services.dll
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Services\obj\Debug\net7.0\Cornelius.Authorization.Services.pdb
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Services\obj\Debug\net7.0\ref\Cornelius.Authorization.Services.dll

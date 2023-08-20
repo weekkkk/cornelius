@@ -6,4 +6,16 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+
+
+    <ItemGroup>
+      <ProjectReference Include="..\Cornelius.Authorization.Models\Cornelius.Authorization.Models.csproj" />
+    </ItemGroup>
+
+
+
+
+
+
+
 </Project>

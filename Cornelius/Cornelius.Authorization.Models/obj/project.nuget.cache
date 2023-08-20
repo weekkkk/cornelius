@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "eFaVGg3D1GMFUxnWv2/a2iTpjFks2e2OS072kz07IPt2g9JPQNmtmm2eyF9QXWC1rE8D0KJvciHz8mGL//c6Cw==",
+  "dgSpecHash": "hpD0BRvhbwG7HRJAQlTbazeR+51WmAcNCArubvIxQbATdzK/Qp41yRrEnapee2D1JgASRshtm/U/SQSHzxvzdQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Poostoi\\RiderProjects\\cornelius\\Cornelius\\Cornelius.Authorization.Models\\Cornelius.Authorization.Models.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Poostoi\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

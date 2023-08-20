@@ -1,0 +1,12 @@
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Models\bin\Debug\net7.0\Cornelius.Authorization.Models.deps.json
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Models\bin\Debug\net7.0\Cornelius.Authorization.Models.dll
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Models\bin\Debug\net7.0\Cornelius.Authorization.Models.pdb
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Models\obj\Debug\net7.0\Cornelius.Authorization.Models.csproj.AssemblyReference.cache
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Models\obj\Debug\net7.0\Cornelius.Authorization.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Models\obj\Debug\net7.0\Cornelius.Authorization.Models.AssemblyInfoInputs.cache
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Models\obj\Debug\net7.0\Cornelius.Authorization.Models.AssemblyInfo.cs
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Models\obj\Debug\net7.0\Cornelius.Authorization.Models.csproj.CoreCompileInputs.cache
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Models\obj\Debug\net7.0\Cornelius.Authorization.Models.dll
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Models\obj\Debug\net7.0\refint\Cornelius.Authorization.Models.dll
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Models\obj\Debug\net7.0\Cornelius.Authorization.Models.pdb
+C:\Users\Poostoi\RiderProjects\cornelius\Cornelius\Cornelius.Authorization.Models\obj\Debug\net7.0\ref\Cornelius.Authorization.Models.dll
