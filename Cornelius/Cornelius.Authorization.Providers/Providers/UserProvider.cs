@@ -13,7 +13,7 @@ public class UserProvider: IUserProvider
         _authorizationContext = authorizationContext;
     }
 
-    public async Task<User> FindAsync(string login, CancellationToken cancellationToken)
+    public async Task<User?> FindAsync(string login, CancellationToken cancellationToken)
     {
         var user = await _authorizationContext.Users
             .Include(u => u.Role)

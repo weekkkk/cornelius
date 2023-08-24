@@ -1,4 +1,4 @@
-﻿namespace Cornelius.Authorization.Services.Services;
+﻿namespace Cornelius.Authorization.Services.Service;
 
 public class IAuthOptions
 {

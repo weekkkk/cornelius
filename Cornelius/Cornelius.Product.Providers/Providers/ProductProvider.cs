@@ -12,7 +12,7 @@ public class ProductProvider: IProductProvider
         _productContext = productContext;
     }
 
-    public async Task<Models.Product> GetByIdAsync(Guid id, CancellationToken cancellationToken)
+    public async Task<Models.Product?> GetByIdAsync(Guid id, CancellationToken cancellationToken)
     {
         var product = await _productContext.Products
             .Include(p => p.Images)

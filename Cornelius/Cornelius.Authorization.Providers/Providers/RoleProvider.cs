@@ -18,7 +18,7 @@ public class RoleProvider: IRoleProvider
         await _authorizationContext.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
     }
 
-    public async Task<Role> FindAsync(string roleName, CancellationToken cancellationToken)
+    public async Task<Role?> FindAsync(string roleName, CancellationToken cancellationToken)
     {
         var role = await _authorizationContext.Roles
             .FirstOrDefaultAsync(d => d.Name == roleName, cancellationToken: cancellationToken).ConfigureAwait(false);

@@ -21,4 +21,9 @@ public class User : BaseEntity
     public string Salt { get; set; }
     public string PasswordHash { get; set; }
     public Role? Role { get; set; }
+
+    public bool Verify(string password)
+    {
+        return BCrypt.Net.BCrypt.Verify((Salt + password), PasswordHash);
+    }
 }

@@ -13,7 +13,7 @@ public class ProjectProvider: IProjectProvider
         _projectContext = projectContext;
     }
 
-    public async Task<Models.Project> GetByIdAsync(Guid id, CancellationToken cancellationToken)
+    public async Task<Models.Project?> GetByIdAsync(Guid id, CancellationToken cancellationToken)
     {
         var project = await _projectContext.Projects
             .Include(p => p.Images)

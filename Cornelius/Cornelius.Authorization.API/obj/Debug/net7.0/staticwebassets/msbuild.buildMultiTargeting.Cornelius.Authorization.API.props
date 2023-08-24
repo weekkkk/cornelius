@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Cornelius.Authorization.API.props" />
+</Project>

@@ -1,7 +1,6 @@
-﻿using Cornelius.Authorization.Models;
-using Cornelius.Authorization.Services.Request;
+﻿using Cornelius.Authorization.Services.Request;
 
-namespace Cornelius.Authorization.Services.Services;
+namespace Cornelius.Authorization.Services.Service;
 
 public interface IUserService
 {

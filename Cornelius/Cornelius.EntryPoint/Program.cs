@@ -1,5 +1,7 @@
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Cornelius.Authorization.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.ConfigureAppConfiguration((hostingContext, config) =>
 {
@@ -7,11 +9,10 @@ builder.WebHost.ConfigureAppConfiguration((hostingContext, config) =>
         .SetBasePath(hostingContext.HostingEnvironment.ContentRootPath)
         .AddJsonFile("apiGateway.json", optional: false, reloadOnChange: true);
 });
-
+builder.Services.AddAuthorization(builder.Configuration);
 
 builder.Services.AddOcelot();
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -26,7 +27,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

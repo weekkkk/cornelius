@@ -7,7 +7,7 @@
             "DownstreamHostAndPorts": [
                 {
                     "Host": "localhost",
-                    "Port": 44337
+                    "Port": 7113
                 }
             ],
             "UpstreamPathTemplate": "/gateway/product",
@@ -19,7 +19,7 @@
             "DownstreamHostAndPorts": [
                 {
                     "Host": "localhost",
-                    "Port": 44337
+                    "Port": 7113
                 }
             ],
             "UpstreamPathTemplate": "/gateway/product/{id}",
@@ -31,11 +31,17 @@
             "DownstreamHostAndPorts": [
                 {
                     "Host": "localhost",
-                    "Port": 44388
+                    "Port": 7161
                 }
             ],
             "UpstreamPathTemplate": "/gateway/project",
-            "UpstreamHttpMethod": ["POST","PUT", "GET" ]
+            "UpstreamHttpMethod": ["POST","PUT", "GET" ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer"
+            },
+            "RouteClaimsRequirement": {
+                "Role": "admin"
+            }
         },
         {
             "DownstreamPathTemplate": "/api/project/{id}",
@@ -43,12 +49,72 @@
             "DownstreamHostAndPorts": [
                 {
                     "Host": "localhost",
-                    "Port": 44388
+                    "Port": 7161
                 }
             ],
             "UpstreamPathTemplate": "/gateway/project/{id}",
             "UpstreamHttpMethod": [ "GET" ]
-        }       
+        },
+        {
+            "DownstreamPathTemplate": "/api/user/login",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7057
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/authorization/login",
+            "UpstreamHttpMethod": ["POST" ]
+            
+
+        },
+        {
+            "DownstreamPathTemplate": "/api/user/registration",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7057
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/authorization/registration",
+            "UpstreamHttpMethod": ["POST" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/user",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7057
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/authorization/check",
+            "UpstreamHttpMethod": ["GET" ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer"
+            }
+        },        
+        {
+            "DownstreamPathTemplate": "/api/user/rolecheck",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7057
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/authorization/role",
+            "UpstreamHttpMethod": ["GET" ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer"
+            }
+        }
         
-    ]
+
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "https://localhost:7224"
+    }
 }
