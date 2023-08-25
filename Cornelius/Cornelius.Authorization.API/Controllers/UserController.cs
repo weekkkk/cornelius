@@ -35,17 +35,5 @@ public class UserController : ApiBaseController
         var token = await _userService.LoginAsync(command, cancellationToken).ConfigureAwait(false);
         return Ok(token);
     }
-
-    [HttpGet]
-    [Authorize]
-    public IActionResult Check()
-    {
-        return Ok();
-    }
-    [HttpGet("RoleCheck")]
-    [Authorize(Roles = "admin")]
-    public IActionResult Check2()
-    {
-        return Ok();
-    }
+    
 }
