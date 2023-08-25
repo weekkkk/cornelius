@@ -44,7 +44,7 @@ public class ProductService: IProductService
     {
         var productDb = await GetByIdAsync(product.Id, cancellationToken);
         productDb.Name = product.Name;
-        productDb.Description = product.Name;
+        productDb.Description = product.Description;
         productDb.Images.AddRange(ConvertImageInArrayByte(product.Images, productDb));
         productDb.DateUpdate = DateTime.Now;
         await _productProvider.UpdateAsync(productDb, cancellationToken);

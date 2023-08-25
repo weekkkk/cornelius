@@ -45,7 +45,7 @@ public class ProjectService: IProjectService
     {
         var projectDb = await GetByIdAsync(project.Id, cancellationToken);
         projectDb.Name = project.Name;
-        projectDb.Description = project.Name;
+        projectDb.Description = project.Description;
         projectDb.Images.AddRange(ConvertImageInArrayByte(project.Images, projectDb));
         projectDb.DateUpdate = DateTime.Now;
         await _projectProvider.UpdateAsync(projectDb, cancellationToken);
