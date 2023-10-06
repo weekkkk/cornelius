@@ -13,7 +13,7 @@
     line-height: var(--n-lh-regular);
     color: var(--n-base);
     background-color: var(--n-default);
-    overflow: hidden;
+    // overflow: hidden;
     @media (max-width: 1024px) {
       overflow: auto;
     }
@@ -55,7 +55,8 @@
     border: none;
     color: var(--n-default);
     padding: 1rem;
-    font-size: 0.88888889rem;
+    // font-size: 0.88888889rem;
+    font-size: var(--n-fs-caption);
     line-height: var(--n-lh-no);
     min-height: fit-content;
     font-weight: var(--n-fw-bold);

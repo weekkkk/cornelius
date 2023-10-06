@@ -1,184 +1,154 @@
 <script lang="ts" setup>
-import { TitleBlock } from '@/shared'
-import { ContactForm, SocialLinks } from '@/widgets'
+import { GridBlock, ImageBlock } from '@/shared'
 </script>
 
 <template>
-  <!-- style="transform: none" -->
-  <TitleBlock
-    :x-start="2"
-    :x-end="5"
-    :y-start="1"
-    :y-end="3"
-    :mobile-x-start="2"
-    mobile-x-end="end"
-    :mobile-y-start="2"
-    :mobile-y-end="3"
-  >
-    Контакты
-  </TitleBlock>
-  <div class="contacts_page-contacts_table f fd-col">
-    <table>
+  <GridBlock is-mobile-hide class="jc-c" :l="2" :r="5" :t="2" :b="4">
+    <h1>Контакты</h1>
+  </GridBlock>
+
+  <GridBlock is-mobile-hide class="jc-fs" :l="2" :r="5" :t="3" :b="9">
+    <table class="accreditations_page-contacts_table">
       <tr>
-        <td>Почта</td>
-        <td>corneliusgas@gmail.com</td>
+        <th>Почта</th>
+        <td>
+          <p>cornelius@gmail.com</p>
+        </td>
       </tr>
       <tr>
-        <td>Центральный офис (тел/факс)</td>
+        <th>Центральный офис (тел/факс)</th>
         <td>
           <p>+373 533 83481 (9:00-17:00)</p>
           <p>+373 777 83485 (9:00-17:00)</p>
         </td>
       </tr>
       <tr>
-        <td>Производственно-техническая база с. Суклея</td>
-        <td>+373 777 66761 (8:00-17:00)</td>
+        <th>Производственно-техническая база</th>
+        <td>
+          <p>+373 533 24599 (8:00-17:00)</p>
+        </td>
       </tr>
       <tr>
-        <td>ПТО, Маркетинг (Viber/WhatsApp)</td>
-        <td>+373 795 35511 (9:00-17:00)</td>
+        <th>ПТО, Маркетинг (Viber/WhatsApp)</th>
+        <td>
+          <p>+373 795 35511</p>
+          <p>+373 777 66761 (10:00-18:00)</p>
+        </td>
       </tr>
       <tr>
-        <td>Директор (Viber)</td>
-        <td>+373 777 13084 (8:00-17:00)</td>
+        <th>Директор (Viber)</th>
+        <td>
+          <p>+373 777 13084 (8:00-17:00)</p>
+        </td>
       </tr>
       <tr>
-        <td>Проектный отдел</td>
-        <td>+373 778 95589 (9:00-17:00)</td>
+        <th>Проектный отдел</th>
+        <td>
+          <p>+373 778 95589 (9:00-17:00)</p>
+        </td>
       </tr>
       <tr>
-        <td>Бухгалтерия</td>
-        <td>+373 533 53721 (9:00-17:00)</td>
+        <th>Бухгалтерия</th>
+        <td>
+          <p>+373 533 53721 (9:00-17:00)</p>
+        </td>
+      </tr>
+      <tr>
+        <th>Центральный офис</th>
+        <td>
+          <p>Молдова, г.Тирасполь, ул. Карла-Либкнехта 385</p>
+        </td>
+      </tr>
+      <tr>
+        <th>Производственно-техническая база</th>
+        <td>
+          <p>с. Суклея, ул. Котовского 81</p>
+        </td>
       </tr>
     </table>
-    <div class="f contacts_page-contacts_table-social_links">
-      <SocialLinks />
-    </div>
-  </div>
+  </GridBlock>
 
-  <!-- style="transform: none" -->
-  <!-- <TitleBlock
-    :x-start="6"
-    x-end="end"
-    :y-start="1"
-    :y-end="3"
-    :mobile-x-start="2"
-    mobile-x-end="end"
-    :mobile-y-start="4"
-    :mobile-y-end="5"
-  >
-    Адреса
-  </TitleBlock> -->
+  <GridBlock is-mobile-hide class="jc-c bg-second-50" :l="6" :r="9" :t="3" :b="6"> </GridBlock>
+  <GridBlock is-mobile-hide class="jc-c bg-second-25" :l="6" :r="8" :t="6" :b="9"> </GridBlock>
+  <GridBlock is-mobile-hide class="jc-c bg-second-75" :l="8" :r="9" :t="6" :b="9"> </GridBlock>
 
-  <table class="contacts_page-addresses_table">
-    <tr>
-      <td>Центральный офис</td>
-      <td>Молдова, г.Тирасполь, ул. Карла-Либкнехта 385</td>
-      <!-- каб. 201, 202, 204 -->
-    </tr>
-    <tr>
-      <td>Производственно-техническая база</td>
-      <td>с. Суклея, ул. Котовского 81</td>
-    </tr>
-  </table>
+  
+  <GridBlock is-mobile-show class="jc-c" :l="2" r="end" :t="3" :b="8">
+    <h2>Контакты</h2>
 
-  <div class="contacts_page-contact_form-wrap f ai-fe">
-    <ContactForm class="w-100" />
-  </div>
+    <table class="accreditations_page-contacts_table" style="margin-right: var(--corn-page-px)">
+      <tr>
+        <th>Почта</th>
+        <td>
+          <p>cornelius@gmail.com</p>
+        </td>
+      </tr>
+      <tr>
+        <th>Центральный офис (тел/факс)</th>
+        <td>
+          <p>+373 533 83481 (9:00-17:00)</p>
+          <p>+373 777 83485 (9:00-17:00)</p>
+        </td>
+      </tr>
+      <tr>
+        <th>Производственно-техническая база</th>
+        <td>
+          <p>+373 533 24599 (8:00-17:00)</p>
+        </td>
+      </tr>
+      <tr>
+        <th>ПТО, Маркетинг (Viber/WhatsApp)</th>
+        <td>
+          <p>+373 795 35511</p>
+          <p>+373 777 66761 (10:00-18:00)</p>
+        </td>
+      </tr>
+      <tr>
+        <th>Директор (Viber)</th>
+        <td>
+          <p>+373 777 13084 (8:00-17:00)</p>
+        </td>
+      </tr>
+      <tr>
+        <th>Проектный отдел</th>
+        <td>
+          <p>+373 778 95589 (9:00-17:00)</p>
+        </td>
+      </tr>
+      <tr>
+        <th>Бухгалтерия</th>
+        <td>
+          <p>+373 533 53721 (9:00-17:00)</p>
+        </td>
+      </tr>
+      <tr>
+        <th>Центральный офис</th>
+        <td>
+          <p>Молдова, г.Тирасполь, ул. Карла-Либкнехта 385</p>
+        </td>
+      </tr>
+      <tr>
+        <th>Производственно-техническая база</th>
+        <td>
+          <p>с. Суклея, ул. Котовского 81</p>
+        </td>
+      </tr>
+    </table>
+  </GridBlock>
 </template>
 
 <style lang="scss" scoped>
-.contacts_page {
-  &-contact_form {
-    &-wrap {
-      grid-column-start: 6;
-      grid-column-end: end;
-      grid-row-start: 4;
-      grid-row-end: end;
-      padding-bottom: var(--page-px);
-      padding-right: var(--page-px);
-      @media (max-width: 800px) {
-        grid-row-start: 6;
-        grid-row-end: end;
-        grid-column-start: 2;
-        grid-column-end: end;
-      }
-    }
-  }
+.accreditations_page {
   &-contacts_table {
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 7;
-    font-size: 16px;
-
-    vertical-align: top;
-    @media (max-width: 800px) {
-      grid-row-start: 3;
-      grid-row-end: 4;
-      grid-column-start: 2;
-      grid-column-end: 5;
-      font-size: 8px;
-      --n-fs-p: 8px !important;
-      td {
-        padding: 8px 0 !important;
-      }
-      &-social_links {
-        display: none;
-      }
-    }
-  }
-  &-addresses_table {
-    grid-column-start: 6;
-    grid-column-end: 9;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    font-size: 16px;
-    vertical-align: top;
-    @media (max-width: 800px) {
-      grid-row-start: 5;
-      grid-row-end: 6;
-      grid-column-start: 2;
-      grid-column-end: 5;
-      font-size: 8px;
-      --n-fs-p: 8px !important;
-      td {
-        padding: 8px 0 !important;
-      }
-    }
-  }
-  &-contacts_table,
-  &-addresses_table {
-    td {
-      padding: 16px 0px;
-      &:first-child {
-        color: var(--n-second-75);
-        width: 50%;
-      }
+    td,
+    th {
+      padding: 1rem 0;
+      text-align: left;
+      font-size: var(--n-fs-p);
+      font-weight: var(--n-fw-regular);
       &:last-child {
-        font-weight: 500;
         text-align: right;
-        // white-space: nowrap;
       }
-    }
-  }
-}
-</style>
-
-<style lang="scss">
-#contacts.page_li {
-  .title_block {
-    @media (max-width: 800px) {
-      transform: none !important;
-    }
-  }
-  .page_li-content {
-    @media (max-width: 800px) {
-      grid-template-rows:
-        calc(var(--page-px) + 40px) 54px fit-content(100px) 54px fit-content(100px) fit-content(
-          100px
-        )
-        var(--page-px);
     }
   }
 }

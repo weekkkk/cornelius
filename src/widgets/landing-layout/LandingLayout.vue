@@ -15,6 +15,10 @@ const pages: PageType<PageComponentType>[] = [
   {
     component: pageComponents.AccreditationsPage,
     hash: 'accreditations'
+  },
+  {
+    component: pageComponents.ContactsPage,
+    hash: 'contacts'
   }
 ]
 </script>

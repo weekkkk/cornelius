@@ -35,7 +35,7 @@ import { ImageBlock, GridBlock } from '@/shared'
 
   <GridBlock is-mobile-show :l="2" r="end" :t="3" :b="8">
     <h2 class="mobile_title">Аккредитации</h2>
-    <div class="f ai-fe jc-fe">
+    <div class="f ai-fs jc-fe">
       <div class="text_block-1 c-second-75" style="flex-grow: 1">
         <p class="fs-caption">Основана в 1997 году</p>
         <p class="fs-caption">Более 150 компаний выбрали нас</p>
@@ -62,7 +62,7 @@ import { ImageBlock, GridBlock } from '@/shared'
     </div>
     <div class="f jc-fe" style="margin-right: var(--corn-page-px);">
       <button style="width: calc((100% / 3) * 2)">
-        Каталог товаров
+        Получить предложение
       </button>
     </div>
   </GridBlock>
