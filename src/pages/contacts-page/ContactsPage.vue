@@ -142,7 +142,7 @@ import { GridBlock, ImageBlock } from '@/shared'
   &-contacts_table {
     td,
     th {
-      padding: 1rem 0;
+      padding: 0.5rem 0;
       text-align: left;
       font-size: var(--n-fs-p);
       font-weight: var(--n-fw-regular);

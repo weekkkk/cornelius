@@ -32,5 +32,6 @@ const props = defineProps<GridPositionType>()
       display: none;
     }
   }
+  
 }
 </style>

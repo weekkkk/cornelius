@@ -9,14 +9,14 @@ const router = createRouter({
       component: LandingLayout
     }
   ],
-  scrollBehavior: (to, from, savedPosition) => {
-    if (to.hash) {
-      return {
-        el: to.hash
-      }
-    }
-    return { left: 0, top: 0 }
-  }
+  // scrollBehavior: (to, from, savedPosition) => {
+  //   if (to.hash) {
+  //     return {
+  //       el: to.hash
+  //     }
+  //   }
+  //   return { left: 0, top: 0 }
+  // }
 })
 
 export { router }
