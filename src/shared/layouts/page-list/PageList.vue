@@ -22,7 +22,12 @@ const activeIndex = computed({
     if (!deltaY || activeIndex.value == undefined) return
     if (deltaY > 0 && activeIndex.value + 1 >= props.pages.length) return
     if (deltaY < 0 && activeIndex.value - 1 < 0) return
-    router.replace({ hash: '#' + props.pages[activeIndex.value + (deltaY > 0 ? 1 : -1)].hash })
+    router
+      .replace({ hash: '#' + props.pages[activeIndex.value + (deltaY > 0 ? 1 : -1)].hash })
+      .then(() => {
+        isAnim.value = true
+        setTimeout(() => (isAnim.value = false), 2000)
+      })
   }
 })
 
@@ -33,8 +38,6 @@ const isAnim = ref(false)
 const onWheel = (e: WheelEvent) => {
   if (isAnim.value || window.innerWidth <= 1024) return
   activeIndex.value = e.deltaY
-  isAnim.value = true
-  setTimeout(() => (isAnim.value = false), 2000)
 }
 
 const onScroll = () => {
