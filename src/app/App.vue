@@ -48,6 +48,9 @@ html {
 
   @media (max-width: 960px) {
     grid-template-columns: var(--corn-page-px) repeat(3, 1fr) var(--corn-page-px);
+    &-line:nth-child(5) ~ .app_bg-line {
+      display: none;
+    }
   }
 }
 

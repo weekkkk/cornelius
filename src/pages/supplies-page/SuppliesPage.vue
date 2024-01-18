@@ -21,11 +21,11 @@ import { ImageBlock, GridBlock } from '@/shared'
     <div class="text_block">
       <p>
         ООО "Корнелиус" поставляет промышленное оборудование и материалы в сфере газификации и
-        систем теплоснабжения, водоснабжения, канализации, вентиляции
+        систем теплоснабжения, водоснабжения, канализации, вентиляции.
       </p>
     </div>
     <div class="f jc-fs">
-      <button style="width: calc(100% / 3)">Каталог товаров</button>
+      <button style="width: calc(100% / 3)">Получить предложение</button>
     </div>
   </GridBlock>
   <GridBlock
@@ -43,16 +43,16 @@ import { ImageBlock, GridBlock } from '@/shared'
     <h1>Поставки</h1>
   </GridBlock>
 
-  <GridBlock is-mobile-show :l="1" :r="5" :t="3" :b="8">
+  <GridBlock is-mobile-show :l="1" r="end" :t="3" :b="8">
     <h2 class="mobile_title" style="margin-left: var(--corn-page-px)">Поставки</h2>
     <div class="text_block" style="margin-left: var(--corn-page-px)">
       <p>
         ООО "Корнелиус" поставляет промышленное оборудование и материалы в сфере газификации и
-        систем теплоснабжения, водоснабжения, канализации, вентиляции
+        систем теплоснабжения, водоснабжения, канализации, вентиляции.
       </p>
     </div>
     <ImageBlock
-      style="margin-left: calc(var(--corn-page-px) * -1)"
+      style="margin-right: var(--corn-page-px)"
       :src="SuppliesImage1"
       :l="1"
       :r="3"
@@ -60,8 +60,8 @@ import { ImageBlock, GridBlock } from '@/shared'
       b="end"
     />
 
-    <div class="f jc-fe">
-      <button style="width: calc(((100% - var(--corn-page-px)) / 3) * 2)">Каталог товаров</button>
+    <div class="f" style="margin: 0 var(--corn-page-px)">
+      <button style="width: calc((100% / 3) * 2)">Получить предложение</button>
     </div>
   </GridBlock>
 </template>

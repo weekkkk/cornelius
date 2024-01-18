@@ -26,9 +26,9 @@ import { ImageBlock, GridBlock } from '@/shared'
     <h1>Проектирование</h1>
   </GridBlock>
 
-  <GridBlock is-mobile-show :l="1" :r="5" :t="3" :b="8">
+  <GridBlock is-mobile-show :l="1" r="end" :t="3" :b="8">
     <h2 class="mobile_title" style="margin-left: var(--corn-page-px)">Проектирование</h2>
-    <div class="text_block" style="margin-left: var(--corn-page-px)">
+    <div class="text_block" style="margin-right: var(--corn-page-px)">
       <p>
         Компания Корнелиус готова выполнить заказы в области архитектурно-строительного
         проектирования совместно с лучшими высококвалифицированными специалистами в области
@@ -41,15 +41,15 @@ import { ImageBlock, GridBlock } from '@/shared'
       </p>
     </div>
     <ImageBlock
-      style="margin-left: calc(var(--corn-page-px) * -1)"
+      style="margin-left: var(--corn-page-px)"
       :src="DesignImage1"
       :l="1"
       :r="3"
       :t="5"
       b="end"
     />
-    <div class="f jc-fe">
-      <button style="width: calc(((100% - var(--corn-page-px)) / 3) * 2)">Каталог товаров</button>
+    <div class="f" style="margin: 0 var(--corn-page-px)">
+      <button style="width: calc(((100% / 3) * 2)">Каталог товаров</button>
     </div>
   </GridBlock>
 </template>
