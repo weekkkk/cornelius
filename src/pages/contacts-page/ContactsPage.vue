@@ -1,10 +1,11 @@
 <script lang="ts" setup>
+import { TelegramIcon, WhatsAppIcon, ViberIcon } from '@/app/assets'
 import { GridBlock, ImageBlock } from '@/shared'
 </script>
 
 <template>
   <GridBlock is-mobile-hide class="jc-fs" :l="2" :r="5" :t="3" b="end">
-    <table class="accreditations_page-contacts_table">
+    <table class="contacts_page-contacts_table">
       <tr>
         <th>Почта</th>
         <td>
@@ -70,12 +71,18 @@ import { GridBlock, ImageBlock } from '@/shared'
 
   <GridBlock is-mobile-hide class="jc-c bg-second-50" :l="6" :r="9" :t="3" :b="6"> </GridBlock>
   <GridBlock is-mobile-hide class="jc-c bg-second-25" :l="6" :r="8" :t="6" :b="9"> </GridBlock>
-  <GridBlock is-mobile-hide class="jc-c bg-second-75" :l="8" :r="9" :t="6" :b="9"> </GridBlock>
+  <GridBlock is-mobile-hide class="jc-c" :l="8" :r="9" :t="6" :b="9">
+    <div class="contacts_page-social_list f fd-col ai-fe jc-sb">
+      <img :src="TelegramIcon" />
+      <img :src="WhatsAppIcon" />
+      <img :src="ViberIcon" />
+    </div>
+  </GridBlock>
 
   <GridBlock is-mobile-show class="jc-c" :l="2" r="end" :t="3" :b="8">
     <h2>Контакты</h2>
 
-    <table class="accreditations_page-contacts_table" style="margin-right: var(--corn-page-px)">
+    <table class="contacts_page-contacts_table" style="margin-right: var(--corn-page-px)">
       <tr>
         <th>Почта</th>
         <td>
@@ -137,7 +144,12 @@ import { GridBlock, ImageBlock } from '@/shared'
 </template>
 
 <style lang="scss" scoped>
-.accreditations_page {
+.contacts_page {
+  &-social_list {
+    > img {
+      width: 5.55555556rem;
+    }
+  }
   &-contacts_table {
     border-collapse: collapse;
     td,
