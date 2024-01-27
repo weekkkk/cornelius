@@ -56,10 +56,14 @@ html {
 
 .grid_block {
   > *:not(.image_block) {
-    transition: 1s ease-in-out;
+    transition: var(--corn-ts) ease-in-out;
+    transition-property: transform, opacity;
     transform: translateX(-100%);
     opacity: 0;
-    animation: 1s grid_block-load ease-in-out;
+    @media (min-width: 1025px) {
+      
+      animation: var(--corn-ts) grid_block-load ease-in-out;
+    }
   }
   @keyframes grid_block-load {
     0% {
@@ -74,10 +78,10 @@ html {
 }
 .image_block {
   > * {
-    transition: 1s ease-in-out;
+    transition: var(--corn-ts) ease-in-out;
     transform: translateY(100%);
     opacity: 0;
-    animation: 1s image_block-load ease-in-out;
+    animation: var(--corn-ts) image_block-load ease-in-out;
   }
   @keyframes image_block-load {
     0% {
@@ -95,8 +99,9 @@ html {
     > *:not(.image_block) {
       transform: translateX(0%);
       opacity: 1;
+      animation: var(--corn-ts) grid_block-load ease-in-out;
       @media (min-width: 1025px) {
-        transition-delay: 1s;
+        transition-delay: var(--corn-ts);
       }
     }
   }
@@ -105,7 +110,7 @@ html {
       transform: translateY(0%);
       opacity: 1;
       @media (min-width: 1025px) {
-        transition-delay: 1s;
+        transition-delay: var(--corn-ts);
       }
     }
   }

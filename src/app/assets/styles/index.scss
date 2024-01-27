@@ -7,6 +7,11 @@
     box-sizing: border-box;
   }
 
+  --corn-ts: 1s;
+  @media (max-width: 960px) {
+  --corn-ts: 0.5s;
+  }
+
   body {
     // font-family: 'OpenSans';
     font-family: 'Montserrat';

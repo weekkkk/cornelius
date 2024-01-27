@@ -1,11 +1,16 @@
 <script lang="ts" setup>
 import * as pageComponents from '@/pages'
 import { PageList, type PageType } from '@/shared'
-import { CorneliusLogo } from '@/app/assets'
+import { CorneliusLogo, MainPageVideo } from '@/app/assets'
 import { useRoute } from 'vue-router'
 
 type PageComponentType = typeof pageComponents.SuppliesPage
 const pages: PageType<PageComponentType>[] = [
+  {
+    component: pageComponents.MainPage,
+    hash: 'main',
+    name: 'Главная'
+  },
   {
     component: pageComponents.SuppliesPage,
     hash: 'supplies',
@@ -35,13 +40,16 @@ const route = useRoute()
   <PageList :pages="pages" />
   <header class="landing_layout-header f ai-c jc-sb">
     <img class="landing_layout-header-logo" :src="CorneliusLogo" />
-    <div class="f g-4">
+    <div
+      class="landing_layout-header-nav f g-4"
+      :class="{ 'c-default': route.hash.slice(1).split('-').includes('main') }"
+    >
       <RouterLink
         :to="{ hash: `#${page.hash}` }"
         :class="{
-          'landing_layout-header-link-active': `#${page.hash}` == route.hash
+          'landing_layout-header-nav-link-active': page.hash == route.hash.slice(1).split('-')[0]
         }"
-        class="landing_layout-header-link fs-h4 fw-medium"
+        class="landing_layout-header-nav-link fs-h4 fw-medium"
         v-for="page in pages"
         >{{ page.name }}</RouterLink
       >
@@ -52,7 +60,7 @@ const route = useRoute()
     <RouterLink
       :to="{ hash: `#${page.hash}` }"
       :class="{
-        'landing_layout-nav-link-active': `#${page.hash}` == route.hash
+        'landing_layout-nav-link-active': page.hash == route.hash.slice(1).split('-')[0]
       }"
       class="landing_layout-nav-link fs-h4 fw-medium"
       v-for="page in pages"
@@ -72,13 +80,18 @@ const route = useRoute()
     &-logo {
       height: 2rem;
     }
-    &-link {
-      color: inherit;
-      text-decoration: none;
-      transition: 0.5s;
-      &:hover,
-      &-active {
-        color: var(--n-brand);
+    &-nav {
+      @media (max-width: 1024px) {
+        display: none;
+      }
+      &-link {
+        color: inherit;
+        text-decoration: none;
+        transition: 0.5s;
+        &:hover,
+        &-active {
+          color: var(--n-brand);
+        }
       }
     }
   }
@@ -87,17 +100,20 @@ const route = useRoute()
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    @media (max-width: 1024px) {
+      display: none;
+    }
     &-link {
       width: 3rem;
       height: 0.5rem;
       background-color: var(--n-second-25);
-      transition: 1s;
+      transition: var(--corn-ts);
       &:not(.landing_layout-nav-link-active):hover {
         width: 4.5rem;
         background-color: var(--n-second-50);
       }
       &-active {
-        transition-delay: 1s;
+        transition-delay: var(--corn-ts);
         background-color: var(--n-brand);
         width: 6rem;
       }

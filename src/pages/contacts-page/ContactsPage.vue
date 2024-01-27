@@ -4,6 +4,10 @@ import { GridBlock, ImageBlock } from '@/shared'
 </script>
 
 <template>
+  <GridBlock is-mobile-hide class="jc-c" :l="2" :r="5" :t="2" :b="4">
+    <h1>Контакты</h1>
+  </GridBlock>
+
   <GridBlock is-mobile-hide class="jc-fs" :l="2" :r="5" :t="3" b="end">
     <table class="contacts_page-contacts_table">
       <tr>
@@ -65,9 +69,7 @@ import { GridBlock, ImageBlock } from '@/shared'
     </table>
   </GridBlock>
 
-  <GridBlock is-mobile-hide class="jc-c" :l="2" :r="5" :t="2" :b="4">
-    <h1>Контакты</h1>
-  </GridBlock>
+  
 
   <GridBlock is-mobile-hide class="jc-c bg-second-50" :l="6" :r="9" :t="3" :b="6"> </GridBlock>
   <GridBlock is-mobile-hide class="jc-c bg-second-25" :l="6" :r="8" :t="6" :b="9"> </GridBlock>
@@ -165,7 +167,7 @@ import { GridBlock, ImageBlock } from '@/shared'
       }
     }
     tr {
-      &:nth-child(2n + 1) {
+      &:nth-child(2n) {
         background-color: var(--n-second-0);
       }
     }

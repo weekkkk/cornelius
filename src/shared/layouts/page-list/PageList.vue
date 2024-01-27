@@ -15,7 +15,7 @@ const router = useRouter()
 
 const activeIndex = computed({
   get: (): number | undefined => {
-    const index = props.pages.findIndex((page) => '#' + page.hash == route.hash)
+    const index = props.pages.findIndex((page) => page.hash == route.hash.slice(1).split('-')[0])
     return index == -1 ? undefined : index
   },
   set: (deltaY: number | undefined) => {
@@ -42,19 +42,40 @@ const onWheel = (e: WheelEvent) => {
 
 const onScroll = () => {
   if (window.innerWidth > 1024 || !pageElements.value) return
-  for (let pageEL of pageElements.value) pageEL.calcTop()
-  let localActiveIndex = pageElements.value.findIndex((el) => el.top > 0) - 1
 
-  if (localActiveIndex >= pageElements.value.length) return
+  for (let pageEL of pageElements.value) pageEL.calcSize()
 
-  if (localActiveIndex < 0) localActiveIndex = pageElements.value.length - 1
+  const wh = window.innerHeight
+  const activeIndexes = pageElements.value
+    .filter((el) => wh - el.bottom + el.height / 2 >= 0 && el.top + el.height / 2 >= 0)
+    .map((el) => {
+      const index = pageElements.value?.indexOf(el)
+      if (index == undefined) return -1
+      return index
+    })
+    console.log('activeIndexes', activeIndexes);
+    
+  if (activeIndexes.length == 0 && activeIndex.value != undefined)
+    activeIndexes.push(activeIndex.value)
 
-  router.replace({ hash: '#' + props.pages[localActiveIndex].hash })
+  router.replace({ hash: '#' + activeIndexes.map((index) => props.pages[index].hash).join('-') })
+}
+
+const onResize = () => {
+  if (window.innerWidth > 1024) return
+  onScroll()
 }
 
 onMounted(() => {
   window.addEventListener('wheel', onWheel)
   window.addEventListener('scroll', onScroll)
+  window.addEventListener('resize', onResize)
+
+  if (window.innerWidth <= 1024) {
+    console.log('onScroll')
+
+    setTimeout(onScroll, 1000)
+  }
 })
 onUnmounted(() => {
   window.removeEventListener('wheel', onWheel)
@@ -62,24 +83,32 @@ onUnmounted(() => {
 </script>
 
 <template>
+  <!-- <div class="test">{{ activeIndex }}</div> -->
   <div class="page_list f fd-col">
     <PageLi
       ref="pageElements"
       v-for="page in pages"
       :hash="page.hash"
       :component="page.component"
-      :active-hash="pages[activeIndex || 0].hash"
     />
   </div>
 </template>
 
 <style lang="scss" scoped>
+.test {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: red;
+  color: white;
+  font-size: 90px;
+}
 .page_list {
   position: relative;
   top: calc(-100vh * v-bind(activeIndex));
   transition: 0s ease-in-out;
   @media (min-width: 1025px) {
-    transition-delay: 1s;
+    transition-delay: var(--corn-ts);
   }
   @media (max-width: 1024px) {
     top: 0;
