@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 import { DesignImage1 } from '@/app'
 import { ImageBlock, GridBlock } from '@/shared'
+import { inject } from 'vue'
+
+const contactFormVisible = inject('contactFormVisible')
 </script>
 
 <template>
@@ -19,7 +22,7 @@ import { ImageBlock, GridBlock } from '@/shared'
       </p>
     </div>
     <div class="f jc-fe">
-      <button style="width: calc(100% / 4)">Каталог товаров</button>
+      <button @click="contactFormVisible = !contactFormVisible" style="width: calc(100% / 4)">Каталог товаров</button>
     </div>
   </GridBlock>
   <GridBlock is-mobile-hide class="jc-c" :l="4" :r="9" :t="3" :b="5">
@@ -49,7 +52,7 @@ import { ImageBlock, GridBlock } from '@/shared'
       b="end"
     />
     <div class="f" style="margin: 0 var(--corn-page-px)">
-      <button style="width: calc(((100% / 3) * 2)">Каталог товаров</button>
+      <button @click="contactFormVisible = !contactFormVisible" style="width: calc(((100% / 3) * 2)">Каталог товаров</button>
     </div>
   </GridBlock>
 </template>

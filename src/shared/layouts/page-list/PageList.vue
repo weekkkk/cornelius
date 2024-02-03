@@ -53,7 +53,6 @@ const onScroll = () => {
       if (index == undefined) return -1
       return index
     })
-    console.log('activeIndexes', activeIndexes);
     
   if (activeIndexes.length == 0 && activeIndex.value != undefined)
     activeIndexes.push(activeIndex.value)

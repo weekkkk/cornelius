@@ -69,8 +69,6 @@ import { GridBlock, ImageBlock } from '@/shared'
     </table>
   </GridBlock>
 
-  
-
   <GridBlock is-mobile-hide class="jc-c bg-second-50" :l="6" :r="9" :t="3" :b="6"> </GridBlock>
   <GridBlock is-mobile-hide class="jc-c bg-second-25" :l="6" :r="8" :t="6" :b="9"> </GridBlock>
   <GridBlock is-mobile-hide class="jc-c" :l="8" :r="9" :t="6" :b="9">
@@ -81,10 +79,10 @@ import { GridBlock, ImageBlock } from '@/shared'
     </div>
   </GridBlock>
 
-  <GridBlock is-mobile-show class="jc-c" :l="2" r="end" :t="3" :b="8">
-    <h2>Контакты</h2>
+  <GridBlock is-mobile-show class="jc-c" :l="1" r="end" :t="3" :b="8">
+    <h2 style="margin-left: var(--corn-page-px)">Контакты</h2>
 
-    <table class="contacts_page-contacts_table" style="margin-right: var(--corn-page-px)">
+    <table class="contacts_page-contacts_table">
       <tr>
         <th>Почта</th>
         <td>

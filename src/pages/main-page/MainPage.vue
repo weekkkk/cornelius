@@ -2,6 +2,9 @@
 import { MainPageVideo } from '@/app'
 import { GridBlock } from '@/shared'
 import { useRoute } from 'vue-router'
+import { inject } from 'vue'
+
+const contactFormVisible = inject('contactFormVisible')
 
 const route = useRoute()
 </script>
@@ -34,7 +37,34 @@ const route = useRoute()
       Сфера нашей деятельности – энергоснабжение различных отраслей народного хозяйства
     </p>
     <div class="f jc-fs">
-      <button style="width: calc(100% / 4)">Получить предложение</button>
+      <button @click="contactFormVisible = !contactFormVisible" style="width: calc(100% / 7)">
+        Получить предложение
+      </button>
+    </div>
+  </GridBlock>
+
+  <GridBlock class="main_page rg-3" is-mobile-show :l="2" :r="5" :t="3" :b="8">
+    <h2 class="mobile_title" style="margin-bottom: 0">Человек - Материализует</h2>
+    <h4>Эффективное энергоснабжение</h4>
+    <div class="f g-3">
+      <u>
+        <p class="fs-small-p">50 сотрудников</p>
+      </u>
+      <u>
+        <p class="fs-small-p">45 постоянных клиентов</p>
+      </u>
+    </div>
+    <p>
+      ООО «Корнелиус» – строительное предприятие с собственным проектным бюро и торговым отделом.
+      Сфера нашей деятельности – энергоснабжение различных отраслей народного хозяйства
+    </p>
+    <div class="f">
+      <button
+        @click="contactFormVisible = !contactFormVisible"
+        style="width: calc(((100% / 3) * 2)"
+      >
+        Получить предложение
+      </button>
     </div>
   </GridBlock>
 </template>

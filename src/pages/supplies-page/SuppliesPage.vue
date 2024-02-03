@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 import { SuppliesImage1, SuppliesImage2 } from '@/app'
 import { ImageBlock, GridBlock } from '@/shared'
+import { inject } from 'vue'
+
+const contactFormVisible = inject('contactFormVisible')
 </script>
 
 <template>
@@ -25,7 +28,7 @@ import { ImageBlock, GridBlock } from '@/shared'
       </p>
     </div>
     <div class="f jc-fs">
-      <button style="width: calc(100% / 3)">Получить предложение</button>
+      <button @click="contactFormVisible = !contactFormVisible" style="width: calc(100% / 3)">Получить предложение</button>
     </div>
   </GridBlock>
   <GridBlock
@@ -61,7 +64,7 @@ import { ImageBlock, GridBlock } from '@/shared'
     />
 
     <div class="f" style="margin: 0 var(--corn-page-px)">
-      <button style="width: calc((100% / 3) * 2)">Получить предложение</button>
+      <button @click="contactFormVisible = !contactFormVisible" style="width: calc((100% / 3) * 2)">Получить предложение</button>
     </div>
   </GridBlock>
 </template>

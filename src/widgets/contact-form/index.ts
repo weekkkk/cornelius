@@ -1,1 +1,2 @@
-export const ContactForm = () => import('./ContactForm.vue')
+import { defineAsyncComponent } from 'vue'
+export const ContactForm = defineAsyncComponent(() => import('./ContactForm.vue'))

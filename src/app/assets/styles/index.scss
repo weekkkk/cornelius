@@ -9,7 +9,16 @@
 
   --corn-ts: 1s;
   @media (max-width: 960px) {
-  --corn-ts: 0.5s;
+    --corn-ts: 0.5s;
+  }
+
+  button {
+    transition: 0.2s ease-in-out;
+    transition-property: opacity;
+    &:hover {
+      // filter: brightness(150%);
+      opacity: 0.8;
+    }
   }
 
   body {

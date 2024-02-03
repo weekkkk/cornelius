@@ -1,8 +1,10 @@
 <script lang="ts" setup>
+import { provide, ref } from 'vue'
 import * as pageComponents from '@/pages'
-import { PageList, type PageType } from '@/shared'
+import { ModalWindow, PageList, type PageType } from '@/shared'
 import { CorneliusLogo, MainPageVideo } from '@/app/assets'
 import { useRoute } from 'vue-router'
+import { ContactForm } from '../contact-form'
 
 type PageComponentType = typeof pageComponents.SuppliesPage
 const pages: PageType<PageComponentType>[] = [
@@ -33,6 +35,10 @@ const pages: PageType<PageComponentType>[] = [
   }
 ]
 
+const contactFormVisible = ref(false)
+
+provide('contactFormVisible', contactFormVisible)
+
 const route = useRoute()
 </script>
 
@@ -56,7 +62,7 @@ const route = useRoute()
     </div>
   </header>
 
-  <nav class="landing_layout-nav f fd-col ai-fe rg-5">
+  <nav class="landing_layout-nav f fd-col ai-fe rg-4">
     <RouterLink
       :to="{ hash: `#${page.hash}` }"
       :class="{
@@ -66,6 +72,10 @@ const route = useRoute()
       v-for="page in pages"
     />
   </nav>
+
+  <ModalWindow :visible="contactFormVisible" @hide="contactFormVisible = false">
+    <ContactForm />
+  </ModalWindow>
 </template>
 
 <style lang="scss" scoped>
