@@ -2,7 +2,7 @@
 import { computed, onMounted, ref } from 'vue'
 import type { ContactType } from './types'
 import { reactive } from 'vue'
-import { MailService } from '@/shared'
+// import { MailService } from '@/shared'
 import { send } from './mail'
 
 const contact: ContactType = reactive({

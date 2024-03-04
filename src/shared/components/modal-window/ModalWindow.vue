@@ -19,7 +19,9 @@ const emit = defineEmits<{ (e: 'hide'): void }>()
 <style lang="scss" scoped>
 .modal_window {
   background-color: var(--n-default);
-  width: 40%;
+  min-width: 40%;
+  width: 400px;
+  margin: var(--corn-page-px);
   padding: 1.5rem;
   &-bg {
     background-color: rgba(0, 0, 0, 0.5);
@@ -28,6 +30,7 @@ const emit = defineEmits<{ (e: 'hide'): void }>()
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 1000;
   }
 }
 .modal_window-ts-enter-active,
