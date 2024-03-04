@@ -8,7 +8,7 @@ import { GridBlock, ImageBlock } from '@/shared'
     <h1>Контакты</h1>
   </GridBlock>
 
-  <GridBlock is-mobile-hide class="jc-fs" :l="2" :r="5" :t="3" b="end">
+  <GridBlock is-mobile-hide class="jc-fs" :l="4" :r="8" :t="4" b="end">
     <table class="contacts_page-contacts_table">
       <tr>
         <th>Почта</th>
@@ -69,8 +69,8 @@ import { GridBlock, ImageBlock } from '@/shared'
     </table>
   </GridBlock>
 
-  <GridBlock is-mobile-hide class="jc-c bg-second-50" :l="6" :r="9" :t="3" :b="6"> </GridBlock>
-  <GridBlock is-mobile-hide class="jc-c bg-second-25" :l="6" :r="8" :t="6" :b="9"> </GridBlock>
+  <!-- <GridBlock is-mobile-hide class="jc-c bg-second-50" :l="6" :r="9" :t="3" :b="6"> </GridBlock> -->
+  <!-- <GridBlock is-mobile-hide class="jc-c bg-second-25" :l="6" :r="8" :t="6" :b="9"> </GridBlock> -->
   <GridBlock is-mobile-hide class="jc-c" :l="8" :r="9" :t="6" :b="9">
     <div class="contacts_page-social_list f fd-col ai-fe jc-sb">
       <img :src="TelegramIcon" />

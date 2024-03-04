@@ -44,7 +44,10 @@ const route = useRoute()
 
 <template>
   <PageList :pages="pages" />
-  <header class="landing_layout-header f ai-c jc-sb">
+  <header
+    class="landing_layout-header f ai-c jc-sb"
+    :class="{ 'landing_layout-header-main_page': route.hash.slice(1).split('-').includes('main') }"
+  >
     <img class="landing_layout-header-logo" :src="CorneliusLogo" />
     <div
       class="landing_layout-header-nav f g-4"
@@ -87,8 +90,18 @@ const route = useRoute()
     left: 0;
     right: 0;
     height: var(--corn-page-py);
+    z-index: 999;
     &-logo {
       height: 2rem;
+    }
+    @media (max-width: 1024px) {
+      height: auto;
+      padding: calc(var(--corn-page-px) / 2) var(--corn-page-px);
+      transition: var(--corn-ts) ease-in-out;
+      transition-property: background;
+      &:not(.landing_layout-header-main_page) {
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+      }
     }
     &-nav {
       @media (max-width: 1024px) {
